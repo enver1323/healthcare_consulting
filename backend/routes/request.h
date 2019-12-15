@@ -28,7 +28,6 @@ struct Request {
     int id;
     int page;
     char name[256];
-    char type[256];
     char email[256];
     char password[1024];
     char description[1024];

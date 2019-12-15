@@ -25,13 +25,13 @@ struct Response authLogin(struct Request request){
     struct User user = loginUser(request.email, request.password);
     struct Response response;
 
-    if (strlen(user.error)) {
-        response.code = CODE_ERROR_INTERNAL;
-        sprintf(response.message, "%s", user.error);
-    } else {
+    if (strlen(user.email)) {
         response.code = CODE_SUCCESS;
         sprintf(response.message, MESSAGE_SUCCESS);
         response.data.userNode = user;
+    } else {
+        response.code = CODE_ERROR_INTERNAL;
+        sprintf(response.message, "%s", user.error);
     }
 
     return response;
