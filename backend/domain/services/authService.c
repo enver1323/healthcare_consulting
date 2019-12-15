@@ -25,5 +25,5 @@ struct Response authLogin(struct Request request){
     struct User user;
     struct Response response;
 
-    
+
 }
