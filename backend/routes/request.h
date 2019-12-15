@@ -4,7 +4,7 @@
 #ifndef REQUEST_H
 #define REQUEST_H
 
-#define MODULE_DEFAULT "defaultModule"
+#define MODULE_DEFAULT "defaultModule"mysql
 
 #define MODULE_AUTH "moduleAuth"
 #define METHOD_REGISTER "methodRegister"
