@@ -1,0 +1,3 @@
+/home/enver/Projects/TermProject/backend/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/enver/Projects/TermProject/backend/cmake-build-debug/CMakeFiles/backend.dir
+/home/enver/Projects/TermProject/backend/cmake-build-debug/CMakeFiles/edit_cache.dir
