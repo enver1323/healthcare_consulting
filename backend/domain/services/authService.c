@@ -7,7 +7,7 @@
 #include "../repositories/userRepository.h"
 
 struct Response authRegister(struct Request request) {
-    struct User user = createUser(request.name, request.type, request.email, request.password);
+    struct User user = createUser(request.name, request.email, request.password);
     struct Response response;
     if (strlen(user.error)) {
         response.code = CODE_ERROR_INTERNAL;
@@ -22,8 +22,17 @@ struct Response authRegister(struct Request request) {
 }
 
 struct Response authLogin(struct Request request){
-    struct User user;
+    struct User user = loginUser(request.email, request.password);
     struct Response response;
 
+    if (strlen(user.error)) {
+        response.code = CODE_ERROR_INTERNAL;
+        sprintf(response.message, "%s", user.error);
+    } else {
+        response.code = CODE_SUCCESS;
+        sprintf(response.message, MESSAGE_SUCCESS);
+        response.data.userNode = user;
+    }
 
+    return response;
 }

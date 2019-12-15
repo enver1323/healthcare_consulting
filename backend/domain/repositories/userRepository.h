@@ -10,20 +10,18 @@
 /** Function Declarations */
 int getIntegerFromASCII(char number);
 
-struct User login(char *email, char *password);
+struct User loginUser(char *email, char *password);
 
 struct User *fillModel(MYSQL_RES *result);
 
 
-struct User createUser(char *name, char *type, char *email, char *password) {
+struct User createUser(char *name, char *email, char *password) {
     struct User user;
     MYSQL *conn = estDBConnection();
     char query[1024];
 
-    sprintf(query, "INSERT INTO %s (name, type, email, password) VALUES('%s','%s','%s',MD5(%s))", TABLE, name, type,
+    sprintf(query, "INSERT INTO %s (name, email, password) VALUES('%s','%s',MD5(%s))", TABLE, name,
             email, password);
-
-    printf("%s", query);
 
     if (makeDBQuery(conn, query))
         sprintf(user.error, "%s", getDBError(conn));
@@ -32,22 +30,23 @@ struct User createUser(char *name, char *type, char *email, char *password) {
 
     sprintf(user.name, "%s", name);
     sprintf(user.email, "%s", email);
-    sprintf(user.type, "%s", type);
 
     return user;
 }
 
-struct User login(char *email, char *password) {
+struct User loginUser(char *email, char *password) {
     struct User user;
 
     MYSQL *conn = estDBConnection();
     char query[1024];
 
     sprintf(query, "SELECT * FROM %s WHERE email = '%s' AND password = MD5(%s)", TABLE, email, password);
+    MYSQL_RES *result = getDBResult(conn);
+
     if (makeDBQuery(conn, query))
         sprintf(user.error, "%s", getDBError(conn));
 
-    MYSQL_RES *result = getDBResult(conn);
+    fprintf(stderr, "%s", query);
 
     user = fillModel(result)[0];
 
@@ -59,7 +58,6 @@ struct User login(char *email, char *password) {
 struct User *fillModel(MYSQL_RES *result) {
     struct User temp;
     struct User *users = malloc(sizeof(struct User) * IPP_USER);
-    unsigned int num_fields = mysql_num_fields(result);
     int counter = 0;
     MYSQL_ROW row;
     MYSQL_FIELD *field;

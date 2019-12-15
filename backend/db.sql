@@ -77,7 +77,6 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `name` varchar(256) NOT NULL,
   `email` varchar(256) NOT NULL,
-  `type` varchar(256) NOT NULL,
   `password` varchar(256) NOT NULL,
   PRIMARY KEY (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -89,7 +88,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES ('TEST_NAME','email@mail.mail','type','d41d8cd98f00b204e9800998ecf8427e');
+INSERT INTO `users` VALUES ('TEST_NAME','email@mail.mail','d41d8cd98f00b204e9800998ecf8427e');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -102,4 +101,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-12-15 13:50:57
+-- Dump completed on 2019-12-15 16:13:08

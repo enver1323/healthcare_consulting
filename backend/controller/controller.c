@@ -128,8 +128,7 @@ int handleConnections() {
             curSd = clients[i];
             if (FD_ISSET(curSd, &readFds)) {
                 /** Read incoming request and check if is closing one */
-                if (recvfrom(curSd, &request, sizeof(struct Request), 0, (struct sockaddr *) &address,
-                             (socklen_t *) sizeof(address)) == 0) {
+                if (read(curSd, &request, sizeof(struct Request)) == 0) {
 
                     getpeername(curSd, (struct sockaddr *) &address, (socklen_t *) &addressLength);
                     printf("Host disconnected , ip %s , port %d \n", inet_ntoa(address.sin_addr),
@@ -198,7 +197,7 @@ int handleRequest(int sd, struct Request *request) {
 
 int sendResponse(int sd, struct Response response) {
     int size = sizeof(response);
-    if (sendto(sd, &response, size, 0, (const struct sockaddr *) &address, sizeof(address)) == size)
+    if (send(sd, &response, size, 0))
         return EXIT_SUCCESS;
 
     fprintf(stderr, "Failed to send response");
