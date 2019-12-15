@@ -8,6 +8,7 @@
 
 #define MODULE_AUTH "moduleAuth"
 #define METHOD_REGISTER "methodRegister"
+#define METHOD_LOGIN "methodLogin"
 
 #define MODULE_HOSPITAL "moduleHospital"
 
