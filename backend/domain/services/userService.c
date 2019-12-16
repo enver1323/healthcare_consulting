@@ -6,7 +6,12 @@
 #include "../models/response.h"
 #include "../repositories/userRepository.h"
 
-struct Response authRegister(struct Request request) {
+/** Function Declarations */
+struct Response userRegister(struct Request request);
+
+struct Response userLogin(int sd, struct Request request);
+
+struct Response userRegister(struct Request request) {
     struct User user = createUser(request.name, request.email, request.password);
     struct Response response;
     if (strlen(user.error)) {
@@ -21,11 +26,13 @@ struct Response authRegister(struct Request request) {
     return response;
 }
 
-struct Response authLogin(struct Request request){
+struct Response userLogin(int sd, struct Request request){
     struct User user = loginUser(request.email, request.password);
     struct Response response;
 
     if (strlen(user.email)) {
+        startSession()
+
         response.code = CODE_SUCCESS;
         sprintf(response.message, MESSAGE_SUCCESS);
         response.data.userNode = user;
