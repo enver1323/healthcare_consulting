@@ -2,7 +2,9 @@
 // Created by enver on 16/12/19.
 //
 
-#ifndef BACKEND_HOSPITLASERVICE_H
-#define BACKEND_HOSPITLASERVICE_H
+#ifndef HOSPITAL_SERVICE_H
+#define HOSPITAL_SERVICE_H
 
-#endif //BACKEND_HOSPITLASERVICE_H
+
+
+#endif

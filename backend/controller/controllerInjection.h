@@ -16,11 +16,11 @@
 #include <sys/time.h> //FD_SET, FD_ISSET, FD_ZERO macros
 
 #include "../domain/services/serviceList.h"
+#include "clientsInjection.h"
 
 /** Constants */
 #define TRUE 1
 #define FALSE 0
 #define PORT 8080
-#define MAX_CLIENTS 30
 
 #endif

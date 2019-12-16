@@ -1,6 +1,9 @@
 //
 // Created by enver on 14/12/19.
 //
+#ifndef RESPONSE_H
+#define RESPONSE_H
+
 #include "modelList.h"
 
 #define MODULE_HOSPITAL "moduleHospital"
@@ -34,3 +37,5 @@ struct Response {
 };
 
 #pragma pack(0)
+
+#endif

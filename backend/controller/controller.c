@@ -19,7 +19,7 @@ int sendResponse(int sd, struct Response response);
 /** Attributes */
 fd_set readFds;
 struct sockaddr_in address;
-int masterSocket, addressLength, activity, clients[MAX_CLIENTS];
+int masterSocket, addressLength, activity;
 
 int startServer() {
     /** Initialize socket */
@@ -134,6 +134,7 @@ int handleConnections() {
                     printf("Host disconnected , ip %s , port %d \n", inet_ntoa(address.sin_addr),
                            ntohs(address.sin_port));
 
+                    closeUserSession(curSd);
                     close(curSd);
                     clients[i] = 0;
                 } else {
@@ -177,13 +178,19 @@ int handleRequest(int sd, struct Request *request) {
 
     if (strcmp(route.module, MODULE_AUTH) == 0) {
         if (strcmp(METHOD_REGISTER, route.method) == 0) {
-            response = authRegister(*request);
+            response = userRegister(*request);
+
+            if (sendResponse(sd, response))
+                return EXIT_FAILURE;
+        }else if (strcmp(METHOD_LOGIN, route.method) == 0) {
+            response = userLogin(sd, *request);
 
             if (sendResponse(sd, response))
                 return EXIT_FAILURE;
         }
-        if (strcmp(METHOD_LOGIN, route.method) == 0) {
-            response = authLogin(*request);
+    }else if(strcmp(route.module, MODULE_DOCTOR) == 0){
+        if(strcmp(route.method, METHOD_LIST) == 0){
+            response = doctorList(*request);
 
             if (sendResponse(sd, response))
                 return EXIT_FAILURE;

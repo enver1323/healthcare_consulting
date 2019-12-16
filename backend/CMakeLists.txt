@@ -18,7 +18,7 @@ pkg_check_modules(LIBMYSQLCLIENT REQUIRED mysqlclient)
 link_directories(${LIBMYSQLCLIENT_LIBRARY_DIRS})
 
 #ADDING EXECUTABLES
-add_executable(backend main.c)
+add_executable(backend main.c domain/services/hospitalService.h)
 
 #LINKING
 target_include_directories(${PROJECT_NAME} PRIVATE ${LIBMYSQLCLIENT_INCLUDE_DIRS})          #INCLUDING DIRECTORIES (MYSQL)

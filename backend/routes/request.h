@@ -11,8 +11,10 @@
 #define METHOD_LOGIN "methodLogin"
 
 #define MODULE_HOSPITAL "moduleHospital"
-
 #define MODULE_DOCTOR "moduleDoctor"
+
+#define METHOD_LIST "methodList"
+#define METHOD_SEARCH "methodSearch"
 
 #pragma pack(1)
 
@@ -27,8 +29,11 @@ struct Request {
     /** Request Parameters */
     int id;
     int page;
+    int hospital_id;
+
     char name[256];
     char email[256];
+    char search[256];
     char password[1024];
     char description[1024];
 };

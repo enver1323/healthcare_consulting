@@ -1,6 +1,8 @@
 //
 // Created by enver on 13/12/19.
 //
+#ifndef HOSPITAL_MODEL_H
+#define HOSPITAL_MODEL_H
 
 #define IPP_HOSPITAL 10
 
@@ -13,3 +15,5 @@ struct Hospital {
 };
 
 #pragma pack(0)
+
+#endif

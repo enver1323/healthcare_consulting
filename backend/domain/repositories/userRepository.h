@@ -6,21 +6,20 @@
 
 #include <string.h>
 #include "../../database/db_connector.h"
+#include "../models/userModel.h"
 
 /** Function Declarations */
-int getIntegerFromASCII(char number);
 
 struct User loginUser(char *email, char *password);
 
-struct User *fillModel(MYSQL_RES *result);
-
+struct User *fillUserModels(MYSQL_RES *result);
 
 struct User createUser(char *name, char *email, char *password) {
     struct User user;
     MYSQL *conn = estDBConnection();
     char query[1024];
 
-    sprintf(query, "INSERT INTO %s (name, email, password) VALUES('%s','%s',MD5('%s'))", TABLE, name,
+    sprintf(query, "INSERT INTO %s (name, email, password) VALUES('%s','%s',MD5('%s'))", TABLE_USER, name,
             email, password);
 
     if (makeDBQuery(conn, query))
@@ -35,27 +34,28 @@ struct User createUser(char *name, char *email, char *password) {
 }
 
 struct User loginUser(char *email, char *password) {
-    struct User user;
+    struct User *users, user;
 
     MYSQL *conn = estDBConnection();
     char query[1024];
 
-    sprintf(query, "SELECT * FROM %s WHERE email = '%s' AND password = MD5('%s')", TABLE, email, password);
+    sprintf(query, "SELECT * FROM %s WHERE email = '%s' AND password = MD5('%s')", TABLE_USER, email, password);
 
     if (makeDBQuery(conn, query))
         sprintf(user.error, "%s", getDBError(conn));
 
     MYSQL_RES *result = getDBResult(conn);
 
-    user = fillModel(result)[0];
+    users = fillUserModels(result);
+    user = users[0];
+    free(users);
 
     closeDBConnection(conn);
 
     return user;
 }
 
-struct User *fillModel(MYSQL_RES *result) {
-    struct User temp;
+struct User *fillUserModels(MYSQL_RES *result) {
     struct User *users = malloc(sizeof(struct User) * IPP_USER);
     int counter = 0;
     MYSQL_ROW row;
@@ -73,10 +73,6 @@ struct User *fillModel(MYSQL_RES *result) {
     mysql_free_result(result);
 
     return users;
-}
-
-int getIntegerFromASCII(char number) {
-    return ((int) number) - 48;
 }
 
 #endif

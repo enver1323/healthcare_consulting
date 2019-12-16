@@ -2,7 +2,14 @@
 // Created by enver on 16/12/19.
 //
 
-#ifndef BACKEND_CLIENTSINJECTION_H
-#define BACKEND_CLIENTSINJECTION_H
+#ifndef CLIENTS_INJECTION_H
+#define CLIENTS_INJECTION_H
 
-#endif //BACKEND_CLIENTSINJECTION_H
+#define MAX_CLIENTS 30
+
+#include "../domain/models/userModel.h"
+
+static int clients[MAX_CLIENTS];
+static struct User clientModels[MAX_CLIENTS];
+
+#endif

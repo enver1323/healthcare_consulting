@@ -11,6 +11,7 @@
 #include <pthread.h>
 
 #define PORT 8080
+#define IP "127.0.0.1"
 
 static int sock = 0;
 struct sockaddr_in serv_addr;
@@ -31,7 +32,7 @@ int initSocket()
     serv_addr.sin_family = AF_INET;
     serv_addr.sin_port = htons(PORT);
     // Convert IPv4 and IPv6 addresses from text to binary form
-    if(inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr)<=0)	{
+    if(inet_pton(AF_INET, IP, &serv_addr.sin_addr)<=0)	{
         printf("\nInvalid address/ Address not supported \n");
         return -1;
     }
@@ -43,21 +44,21 @@ int initSocket()
     }
 
     struct Request request;
-    sprintf(request.route.module, MODULE_AUTH);
-    sprintf(request.route.method, METHOD_REGISTER);
-    sprintf(request.name, "TEST_NAME");
-    sprintf(request.type, "type");
-    sprintf(request.password, "password");
-    sprintf(request.email, "email@mail.mail");
+    sprintf(request.route.module, MODULE_DOCTOR);
+    sprintf(request.route.method, METHOD_LIST);
+    request.hospital_id = 0;
+    request.page = 0;
 
-    sendto(sock, &request, sizeof(request), 0, (const struct sockaddr *) &serv_addr, sizeof(serv_addr));
+    send(sock, &request, sizeof(request), 0);
 
     struct Response response;
 
-    recvfrom(sock, &response, sizeof(response), 0, (const struct sockaddr *) &serv_addr, sizeof(serv_addr));
+    read(sock, &response, sizeof(response));
 
     printf("%d", response.code);
-    printf("%s", response.message);
+    for(int i = 0; i < IPP_DOCTOR; i++){
+        printf("%d", response.data.doctorList[i].id);
+    }
 
     close(sock);
 

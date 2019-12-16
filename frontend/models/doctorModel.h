@@ -1,6 +1,8 @@
 //
 // Created by enver on 13/12/19.
 //
+#ifndef DOCTOR_MODEL_H
+#define DOCTOR_MODEL_H
 
 #define IPP_DOCTOR 10
 
@@ -13,3 +15,5 @@ struct Doctor {
 };
 
 #pragma pack(0)
+
+#endif

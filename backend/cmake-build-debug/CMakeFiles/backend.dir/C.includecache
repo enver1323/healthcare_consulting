@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/enver/Projects/TermProject/backend/controller/clientsInjection.h
+../domain/models/userModel.h
+/home/enver/Projects/TermProject/backend/domain/models/userModel.h
+
 /home/enver/Projects/TermProject/backend/controller/controller.c
 controllerInjection.h
 /home/enver/Projects/TermProject/backend/controller/controllerInjection.h
@@ -33,6 +37,8 @@ sys/time.h
 -
 ../domain/services/serviceList.h
 /home/enver/Projects/TermProject/backend/domain/services/serviceList.h
+clientsInjection.h
+/home/enver/Projects/TermProject/backend/controller/clientsInjection.h
 
 /home/enver/Projects/TermProject/backend/database/db_connector.h
 mysql/mysql.h
@@ -58,33 +64,49 @@ modelList.h
 
 /home/enver/Projects/TermProject/backend/domain/models/userModel.h
 
+/home/enver/Projects/TermProject/backend/domain/repositories/doctorRepository.h
+string.h
+-
+../../database/db_connector.h
+/home/enver/Projects/TermProject/backend/database/db_connector.h
+../models/doctorModel.h
+/home/enver/Projects/TermProject/backend/domain/models/doctorModel.h
+
 /home/enver/Projects/TermProject/backend/domain/repositories/userRepository.h
 string.h
 -
 ../../database/db_connector.h
 /home/enver/Projects/TermProject/backend/database/db_connector.h
-
-/home/enver/Projects/TermProject/backend/domain/services/authService.c
-../../routes/request.h
-/home/enver/Projects/TermProject/backend/routes/request.h
-../models/response.h
-/home/enver/Projects/TermProject/backend/domain/models/response.h
-../repositories/userRepository.h
-/home/enver/Projects/TermProject/backend/domain/repositories/userRepository.h
+../models/userModel.h
+/home/enver/Projects/TermProject/backend/domain/models/userModel.h
 
 /home/enver/Projects/TermProject/backend/domain/services/doctorService.c
 ../../routes/request.h
 /home/enver/Projects/TermProject/backend/routes/request.h
 ../models/response.h
 /home/enver/Projects/TermProject/backend/domain/models/response.h
-../repositories/userRepository.h
-/home/enver/Projects/TermProject/backend/domain/repositories/userRepository.h
+../repositories/doctorRepository.h
+/home/enver/Projects/TermProject/backend/domain/repositories/doctorRepository.h
+
+/home/enver/Projects/TermProject/backend/domain/services/hospitalService.h
 
 /home/enver/Projects/TermProject/backend/domain/services/serviceList.h
-authService.c
-/home/enver/Projects/TermProject/backend/domain/services/authService.c
+userService.c
+/home/enver/Projects/TermProject/backend/domain/services/userService.c
 doctorService.c
 /home/enver/Projects/TermProject/backend/domain/services/doctorService.c
+hospitalService.h
+/home/enver/Projects/TermProject/backend/domain/services/hospitalService.h
+
+/home/enver/Projects/TermProject/backend/domain/services/userService.c
+../../routes/request.h
+/home/enver/Projects/TermProject/backend/routes/request.h
+../models/response.h
+/home/enver/Projects/TermProject/backend/domain/models/response.h
+../repositories/userRepository.h
+/home/enver/Projects/TermProject/backend/domain/repositories/userRepository.h
+../../controller/clientsInjection.h
+/home/enver/Projects/TermProject/backend/controller/clientsInjection.h
 
 /home/enver/Projects/TermProject/backend/main.c
 stdio.h

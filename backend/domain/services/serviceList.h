@@ -4,7 +4,8 @@
 #ifndef SERVICE_LIST_H
 #define SERVICE_LIST_H
 
-#include "authService.c"
+#include "userService.c"
 #include "doctorService.c"
+#include "hospitalService.h"
 
 #endif
