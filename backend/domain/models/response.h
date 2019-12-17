@@ -19,14 +19,14 @@
  * IPP - Items Per Page
  */
 struct Data{
-    union {
+//    union {
         struct Doctor doctorNode;
         struct Doctor doctorList[IPP_DOCTOR];
         struct Hospital hospitalNode;
         struct Hospital hospitalList[IPP_HOSPITAL];
         struct Disease diseaseList[IPP_DISEASE];
         struct User userNode;
-    };
+//    };
 };
 
 struct Response {
