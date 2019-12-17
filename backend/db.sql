@@ -107,9 +107,7 @@ CREATE TABLE `queues` (
   `patient_email` varchar(255) NOT NULL,
   `order` int(10) NOT NULL DEFAULT '0',
   PRIMARY KEY (`doctor_email`,`patient_email`),
-  KEY `patient_email` (`patient_email`),
-  CONSTRAINT `queues_ibfk_1` FOREIGN KEY (`doctor_email`) REFERENCES `doctors` (`email`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `queues_ibfk_2` FOREIGN KEY (`patient_email`) REFERENCES `users` (`email`)
+  KEY `patient_email` (`patient_email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -157,4 +155,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-12-18  1:08:36
+-- Dump completed on 2019-12-18  1:14:00

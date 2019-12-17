@@ -22,6 +22,9 @@
 #define METHOD_ADD "methodAdd"
 #define METHOD_DELETE "methodDelete"
 
+#define MODULE_CHAT "moduleChat"
+#define METHOD_START "methodStart"
+
 struct Route {
     char module[1024];
     char method[1024];
