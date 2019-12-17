@@ -1,9 +1,6 @@
 //
 // Created by enver on 15/12/19.
 //
-#ifndef DOCTOR_SERVICE_H
-#define DOCTOR_SERVICE_H
-
 #include "../../routes/request.h"
 #include "../models/response.h"
 #include "../repositories/doctorRepository.h"
@@ -13,9 +10,8 @@ struct Response doctorList(struct Request request) {
 
     struct Doctor *doctors = getDoctorList(request.page, request.hospital_id, request.search);
 
-    for (int i = 0; i < IPP_DOCTOR; i++) {
+    for (int i = 0; i < IPP_DOCTOR; i++)
         response.data.doctorList[i] = doctors[i];
-    }
 
     free(doctors);
 
@@ -24,5 +20,3 @@ struct Response doctorList(struct Request request) {
 
     return response;
 }
-
-#endif

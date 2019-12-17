@@ -44,11 +44,11 @@ int initSocket()
     }
 
     struct Request request;
-    sprintf(request.route.module, MODULE_DOCTOR);
+    sprintf(request.route.module, MODULE_HOSPITAL);
     sprintf(request.route.method, METHOD_LIST);
-    request.hospital_id = 0;
-    request.page = 0;
-    sprintf(request.search,"%s", "Sultanov");
+    request.id = 88;
+    request.page = 3;
+//    sprintf(request.search,"%s", "");
 
     send(sock, &request, sizeof(request), 0);
 
@@ -58,7 +58,7 @@ int initSocket()
 
     printf("%d\n", response.code);
     for(int i = 0; i < IPP_DOCTOR; i++){
-        printf("%s\n", response.data.doctorList[i].name);
+        printf("%s\n", response.data.hospitalList[i].name);
     }
 
     close(sock);

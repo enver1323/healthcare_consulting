@@ -11,9 +11,10 @@ CMakeFiles/backend.dir/main.c.o: ../domain/models/modelList.h
 CMakeFiles/backend.dir/main.c.o: ../domain/models/response.h
 CMakeFiles/backend.dir/main.c.o: ../domain/models/userModel.h
 CMakeFiles/backend.dir/main.c.o: ../domain/repositories/doctorRepository.h
+CMakeFiles/backend.dir/main.c.o: ../domain/repositories/hospitalRepository.h
 CMakeFiles/backend.dir/main.c.o: ../domain/repositories/userRepository.h
 CMakeFiles/backend.dir/main.c.o: ../domain/services/doctorService.c
-CMakeFiles/backend.dir/main.c.o: ../domain/services/hospitalService.h
+CMakeFiles/backend.dir/main.c.o: ../domain/services/hospitalService.c
 CMakeFiles/backend.dir/main.c.o: ../domain/services/serviceList.h
 CMakeFiles/backend.dir/main.c.o: ../domain/services/userService.c
 CMakeFiles/backend.dir/main.c.o: ../main.c

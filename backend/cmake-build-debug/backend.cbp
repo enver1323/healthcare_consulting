@@ -80,9 +80,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/enver/Projects/TermProject/backend/domain/services/hospitalService.h">
-			<Option target="backend"/>
-		</Unit>
 		<Unit filename="/home/enver/Projects/TermProject/backend/main.c">
 			<Option target="backend"/>
 		</Unit>

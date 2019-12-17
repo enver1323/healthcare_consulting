@@ -5,13 +5,16 @@
 #define HOSPITAL_MODEL_H
 
 #define IPP_HOSPITAL 10
+#define TABLE_HOSPITAL "hospitals"
 
 #pragma pack(1)
 
 struct Hospital {
     int id;
     char name[256];
-    char description[1024];
+    char address[1024];
+
+    struct Doctor doctorList[IPP_DOCTOR];
 };
 
 #pragma pack(0)

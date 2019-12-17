@@ -14,6 +14,7 @@
 #define MODULE_DOCTOR "moduleDoctor"
 
 #define METHOD_LIST "methodList"
+#define METHOD_SHOW "methodShow"
 #define METHOD_SEARCH "methodSearch"
 
 #pragma pack(1)

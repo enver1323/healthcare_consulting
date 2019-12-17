@@ -195,6 +195,18 @@ int handleRequest(int sd, struct Request *request) {
             if (sendResponse(sd, response))
                 return EXIT_FAILURE;
         }
+    }else if(strcmp(route.module, MODULE_HOSPITAL) == 0){
+        if(strcmp(route.method, METHOD_LIST) == 0){
+            response = hospitalList(*request);
+
+            if (sendResponse(sd, response))
+                return EXIT_FAILURE;
+        }else if(strcmp(route.method, METHOD_SHOW) == 0){
+            response = hospitalNode(*request);
+
+            if (sendResponse(sd, response))
+                return EXIT_FAILURE;
+        }
     }
 
     sprintf(request->route.module, MODULE_DEFAULT);
