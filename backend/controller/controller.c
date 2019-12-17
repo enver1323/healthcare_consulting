@@ -12,10 +12,6 @@ int handleConnections();
 
 int handleNewConnection();
 
-int handleRequest(int sd, struct Request *request);
-
-int sendResponse(int sd, struct Response response);
-
 /** Attributes */
 fd_set readFds;
 struct sockaddr_in address;
@@ -170,55 +166,4 @@ int handleNewConnection() {
     }
 
     return EXIT_SUCCESS;
-}
-
-int handleRequest(int sd, struct Request *request) {
-    struct Response response;
-    struct Route route = request->route;
-
-    if (strcmp(route.module, MODULE_AUTH) == 0) {
-        if (strcmp(METHOD_REGISTER, route.method) == 0) {
-            response = userRegister(*request);
-
-            if (sendResponse(sd, response))
-                return EXIT_FAILURE;
-        }else if (strcmp(METHOD_LOGIN, route.method) == 0) {
-            response = userLogin(sd, *request);
-
-            if (sendResponse(sd, response))
-                return EXIT_FAILURE;
-        }
-    }else if(strcmp(route.module, MODULE_DOCTOR) == 0){
-        if(strcmp(route.method, METHOD_LIST) == 0){
-            response = doctorList(*request);
-
-            if (sendResponse(sd, response))
-                return EXIT_FAILURE;
-        }
-    }else if(strcmp(route.module, MODULE_HOSPITAL) == 0){
-        if(strcmp(route.method, METHOD_LIST) == 0){
-            response = hospitalList(*request);
-
-            if (sendResponse(sd, response))
-                return EXIT_FAILURE;
-        }else if(strcmp(route.method, METHOD_SHOW) == 0){
-            response = hospitalNode(*request);
-
-            if (sendResponse(sd, response))
-                return EXIT_FAILURE;
-        }
-    }
-
-    sprintf(request->route.module, MODULE_DEFAULT);
-
-    return EXIT_SUCCESS;
-}
-
-int sendResponse(int sd, struct Response response) {
-    int size = sizeof(response);
-    if (send(sd, &response, size, 0))
-        return EXIT_SUCCESS;
-
-    fprintf(stderr, "Failed to send response");
-    return EXIT_FAILURE;
 }

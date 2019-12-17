@@ -6,6 +6,7 @@
 
 #include "userService.c"
 #include "doctorService.c"
+#include "diseaseService.c"
 #include "hospitalService.c"
 
 #endif

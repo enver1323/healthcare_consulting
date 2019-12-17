@@ -11,6 +11,7 @@
 #define METHOD_LOGIN "methodLogin"
 
 #define MODULE_HOSPITAL "moduleHospital"
+#define MODULE_DISEASE "moduleDisease"
 #define MODULE_DOCTOR "moduleDoctor"
 
 #define METHOD_LIST "methodList"

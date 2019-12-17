@@ -35,16 +35,18 @@ netinet/in.h
 -
 sys/time.h
 -
-../domain/services/serviceList.h
-/home/enver/Projects/TermProject/backend/domain/services/serviceList.h
 clientsInjection.h
 /home/enver/Projects/TermProject/backend/controller/clientsInjection.h
+../routes/router.h
+/home/enver/Projects/TermProject/backend/routes/router.h
 
 /home/enver/Projects/TermProject/backend/database/db_connector.h
 mysql/mysql.h
 -
 stdio.h
 -
+
+/home/enver/Projects/TermProject/backend/domain/models/diseaseModel.h
 
 /home/enver/Projects/TermProject/backend/domain/models/doctorModel.h
 
@@ -55,6 +57,8 @@ doctorModel.h
 /home/enver/Projects/TermProject/backend/domain/models/doctorModel.h
 hospitalModel.h
 /home/enver/Projects/TermProject/backend/domain/models/hospitalModel.h
+diseaseModel.h
+/home/enver/Projects/TermProject/backend/domain/models/diseaseModel.h
 userModel.h
 /home/enver/Projects/TermProject/backend/domain/models/userModel.h
 
@@ -63,6 +67,14 @@ modelList.h
 /home/enver/Projects/TermProject/backend/domain/models/modelList.h
 
 /home/enver/Projects/TermProject/backend/domain/models/userModel.h
+
+/home/enver/Projects/TermProject/backend/domain/repositories/diseaseRepository.h
+string.h
+-
+../../database/db_connector.h
+/home/enver/Projects/TermProject/backend/database/db_connector.h
+../models/diseaseModel.h
+/home/enver/Projects/TermProject/backend/domain/models/diseaseModel.h
 
 /home/enver/Projects/TermProject/backend/domain/repositories/doctorRepository.h
 string.h
@@ -88,6 +100,14 @@ string.h
 ../models/userModel.h
 /home/enver/Projects/TermProject/backend/domain/models/userModel.h
 
+/home/enver/Projects/TermProject/backend/domain/services/diseaseService.c
+../../routes/request.h
+/home/enver/Projects/TermProject/backend/routes/request.h
+../models/response.h
+/home/enver/Projects/TermProject/backend/domain/models/response.h
+../repositories/diseaseRepository.h
+/home/enver/Projects/TermProject/backend/domain/repositories/diseaseRepository.h
+
 /home/enver/Projects/TermProject/backend/domain/services/doctorService.c
 ../../routes/request.h
 /home/enver/Projects/TermProject/backend/routes/request.h
@@ -109,6 +129,8 @@ userService.c
 /home/enver/Projects/TermProject/backend/domain/services/userService.c
 doctorService.c
 /home/enver/Projects/TermProject/backend/domain/services/doctorService.c
+diseaseService.c
+/home/enver/Projects/TermProject/backend/domain/services/diseaseService.c
 hospitalService.c
 /home/enver/Projects/TermProject/backend/domain/services/hospitalService.c
 
@@ -129,4 +151,8 @@ controller/controller.c
 /home/enver/Projects/TermProject/backend/controller/controller.c
 
 /home/enver/Projects/TermProject/backend/routes/request.h
+
+/home/enver/Projects/TermProject/backend/routes/router.h
+../domain/services/serviceList.h
+/home/enver/Projects/TermProject/backend/domain/services/serviceList.h
 

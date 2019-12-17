@@ -6,6 +6,7 @@
 
 #include "doctorModel.h"
 #include "hospitalModel.h"
+#include "diseaseModel.h"
 #include "userModel.h"
 
 #endif

@@ -3,6 +3,7 @@
 
 CMakeFiles/frontend.dir/main.c.o
  /home/enver/Projects/TermProject/frontend/main.c
+ /home/enver/Projects/TermProject/frontend/models/diseaseModel.h
  /home/enver/Projects/TermProject/frontend/models/doctorModel.h
  /home/enver/Projects/TermProject/frontend/models/hospitalModel.h
  /home/enver/Projects/TermProject/frontend/models/modelList.h
