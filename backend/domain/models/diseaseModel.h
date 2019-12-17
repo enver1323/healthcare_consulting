@@ -6,7 +6,7 @@
 
 #define TABLE_DISEASE "diseases"
 
-#define IPP_DISEASE 10
+#define IPP_DISEASE 4
 
 struct Disease {
     int id;

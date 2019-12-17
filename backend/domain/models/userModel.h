@@ -5,7 +5,7 @@
 #define USER_MODEL_H
 
 #define TABLE_USER "users"
-#define IPP_USER 10
+#define IPP_USER 4
 
 struct User {
     int id;
