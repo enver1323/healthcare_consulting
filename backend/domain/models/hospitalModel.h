@@ -7,8 +7,6 @@
 #define IPP_HOSPITAL 10
 #define TABLE_HOSPITAL "hospitals"
 
-#pragma pack(1)
-
 struct Hospital {
     int id;
     char name[256];
@@ -16,7 +14,5 @@ struct Hospital {
 
     struct Doctor doctorList[IPP_DOCTOR];
 };
-
-#pragma pack(0)
 
 #endif

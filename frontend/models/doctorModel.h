@@ -8,8 +8,6 @@
 
 #define IPP_DOCTOR 10
 
-#pragma pack(1)
-
 struct Doctor {
     int id;
     int hospital_id;
@@ -17,7 +15,5 @@ struct Doctor {
     char email[256];
     char phone[256];
 };
-
-#pragma pack(0)
 
 #endif

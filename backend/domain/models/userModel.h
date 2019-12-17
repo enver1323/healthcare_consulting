@@ -7,8 +7,6 @@
 #define TABLE_USER "users"
 #define IPP_USER 10
 
-#pragma pack(1)
-
 struct User {
     int id;
     char name[256];
@@ -17,7 +15,5 @@ struct User {
     char password[256];
     char error[256];
 };
-
-#pragma pack(0)
 
 #endif

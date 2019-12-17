@@ -8,8 +8,6 @@
 
 #define IPP_DISEASE 10
 
-#pragma pack(1)
-
 struct Disease {
     int id;
     char name[256];
@@ -20,7 +18,5 @@ struct Disease {
     float auroc;
     char description[1024];
 };
-
-#pragma pack(0)
 
 #endif

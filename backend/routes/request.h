@@ -18,8 +18,6 @@
 #define METHOD_SHOW "methodShow"
 #define METHOD_SEARCH "methodSearch"
 
-#pragma pack(1)
-
 struct Route {
     char module[1024];
     char method[1024];
@@ -39,7 +37,5 @@ struct Request {
     char password[1024];
     char description[1024];
 };
-
-#pragma pack(0)
 
 #endif

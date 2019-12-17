@@ -15,8 +15,6 @@
 #define MESSAGE_SUCCESS "success"
 #define MESSAGE_ERROR "error"
 
-#pragma pack(1)
-
 /**
  * IPP - Items Per Page
  */
@@ -36,7 +34,5 @@ struct Response {
     char message[1024];
     struct Data data;
 };
-
-#pragma pack(0)
 
 #endif
