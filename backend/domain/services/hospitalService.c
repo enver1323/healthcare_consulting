@@ -12,10 +12,8 @@ struct Response hospitalList(struct Request request) {
     struct Hospital *hospitals = getHospitalList(request.page, request.search);
 
     printf("\nPAGE: %d\n", request.page);
-    for (int i = 0; i < IPP_DOCTOR; i++){
+    for (int i = 0; i < IPP_DOCTOR; i++)
         response.data.hospitalList[i] = hospitals[i];
-        printf("ID: %d, name: %s\n", response.data.hospitalList[i].id, response.data.hospitalList[i].name);
-    }
 
     free(hospitals);
 

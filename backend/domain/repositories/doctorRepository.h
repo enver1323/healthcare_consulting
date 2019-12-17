@@ -12,6 +12,8 @@
 /** Function Declarations */
 struct Doctor *fillDoctorModels(MYSQL_RES *result);
 
+struct Doctor fillDoctorModel(char *email, int hospital_id, char *phone, char *name);
+
 struct Doctor *getDoctorList(int page, int hospital, char *search);
 
 struct Doctor *getDoctorList(int page, int hospital, char *search) {
@@ -19,13 +21,14 @@ struct Doctor *getDoctorList(int page, int hospital, char *search) {
     int offset = page * IPP_DOCTOR;
     struct Doctor *doctors;
 
-    sprintf(query, "SELECT * FROM %s WHERE (name LIKE '%%%s%%' OR email LIKE '%%%s%%')", TABLE_DOCTOR, search,
+    sprintf(query, "SELECT * FROM %s INNER JOIN %s USING (email) WHERE (name LIKE '%%%s%%' OR email LIKE '%%%s%%')",
+            TABLE_DOCTOR, TABLE_USER, search,
             search);
 
     if (hospital > 0)
         sprintf(query, "%s AND hospital_id = %d ", query, hospital);
 
-    sprintf(query, "%s ORDER BY id DESC LIMIT %d OFFSET %d", query, IPP_DOCTOR, offset);
+    sprintf(query, "%s ORDER BY hospital_id DESC LIMIT %d OFFSET %d", query, IPP_DOCTOR, offset);
 
     MYSQL *conn = estDBConnection();
 
@@ -44,21 +47,26 @@ struct Doctor *fillDoctorModels(MYSQL_RES *result) {
     int counter = 0;
     MYSQL_ROW row;
 
-    while ((row = mysql_fetch_row(result)) != NULL) {
-        struct Doctor doctor;
+    while ((row = mysql_fetch_row(result)) != NULL)
+        doctors[counter++] = fillDoctorModel(row[0], atoi(row[1]), row[2], row[3]);
 
-        doctor.id = atoi(row[0]);
-        doctor.hospital_id = atoi(row[1]);
-        sprintf(doctor.name, "%s", row[2]);
-        sprintf(doctor.email, "%s", row[3]);
-        sprintf(doctor.phone, "%s", row[4]);
-
-        doctors[counter++] = doctor;
-    }
+    for (; counter < IPP_DOCTOR;)
+        doctors[counter++] = fillDoctorModel("", 0, "", "");
 
     mysql_free_result(result);
 
     return doctors;
+}
+
+struct Doctor fillDoctorModel(char *email, int hospital_id, char *phone, char *name) {
+    struct Doctor doctor;
+
+    doctor.hospital_id = hospital_id;
+    sprintf(doctor.name, "%s", name);
+    sprintf(doctor.email, "%s", email);
+    sprintf(doctor.phone, "%s", phone);
+
+    return doctor;
 }
 
 #endif

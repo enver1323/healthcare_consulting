@@ -18,6 +18,10 @@
 #define METHOD_SHOW "methodShow"
 #define METHOD_SEARCH "methodSearch"
 
+#define MODULE_QUEUE "moduleQueue"
+#define METHOD_ADD "methodAdd"
+#define METHOD_DELETE "methodDelete"
+
 struct Route {
     char module[1024];
     char method[1024];
@@ -36,6 +40,9 @@ struct Request {
     char search[256];
     char password[1024];
     char description[1024];
+
+    char doctorEmail[1024];
+    char patientEmail[1024];
 };
 
 #endif

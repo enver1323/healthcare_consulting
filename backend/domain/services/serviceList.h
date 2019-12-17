@@ -8,5 +8,6 @@
 #include "doctorService.c"
 #include "diseaseService.c"
 #include "hospitalService.c"
+#include "queueService.c"
 
 #endif

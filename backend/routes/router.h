@@ -22,34 +22,46 @@ int handleRequest(int sd, struct Request *request) {
 
             if (sendResponse(sd, response))
                 return EXIT_FAILURE;
-        }else if (strcmp(METHOD_LOGIN, route.method) == 0) {
+        } else if (strcmp(METHOD_LOGIN, route.method) == 0) {
             response = userLogin(sd, *request);
 
             if (sendResponse(sd, response))
                 return EXIT_FAILURE;
         }
-    }else if(strcmp(route.module, MODULE_DOCTOR) == 0){
-        if(strcmp(route.method, METHOD_LIST) == 0){
+    } else if (strcmp(route.module, MODULE_DOCTOR) == 0) {
+        if (strcmp(route.method, METHOD_LIST) == 0) {
             response = doctorList(*request);
 
             if (sendResponse(sd, response))
                 return EXIT_FAILURE;
         }
-    }else if(strcmp(route.module, MODULE_HOSPITAL) == 0){
-        if(strcmp(route.method, METHOD_LIST) == 0){
+    } else if (strcmp(route.module, MODULE_HOSPITAL) == 0) {
+        if (strcmp(route.method, METHOD_LIST) == 0) {
             response = hospitalList(*request);
 
             if (sendResponse(sd, response))
                 return EXIT_FAILURE;
-        }else if(strcmp(route.method, METHOD_SHOW) == 0){
+        } else if (strcmp(route.method, METHOD_SHOW) == 0) {
             response = hospitalNode(*request);
 
             if (sendResponse(sd, response))
                 return EXIT_FAILURE;
         }
-    }else if(strcmp(route.module, MODULE_DISEASE) == 0){
-        if(strcmp(route.method, METHOD_LIST) == 0){
+    } else if (strcmp(route.module, MODULE_DISEASE) == 0) {
+        if (strcmp(route.method, METHOD_LIST) == 0) {
             response = diseaseList(*request);
+
+            if (sendResponse(sd, response))
+                return EXIT_FAILURE;
+        }
+    } else if (strcmp(route.module, MODULE_QUEUE) == 0) {
+        if (strcmp(route.method, METHOD_ADD) == 0) {
+            response = queueAdd(*request);
+
+            if (sendResponse(sd, response))
+                return EXIT_FAILURE;
+        } else if (strcmp(route.method, METHOD_DELETE) == 0) {
+            response = queueDelete(*request);
 
             if (sendResponse(sd, response))
                 return EXIT_FAILURE;

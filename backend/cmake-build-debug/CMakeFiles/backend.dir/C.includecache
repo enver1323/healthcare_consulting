@@ -61,6 +61,10 @@ diseaseModel.h
 /home/enver/Projects/TermProject/backend/domain/models/diseaseModel.h
 userModel.h
 /home/enver/Projects/TermProject/backend/domain/models/userModel.h
+queueModel.h
+/home/enver/Projects/TermProject/backend/domain/models/queueModel.h
+
+/home/enver/Projects/TermProject/backend/domain/models/queueModel.h
 
 /home/enver/Projects/TermProject/backend/domain/models/response.h
 modelList.h
@@ -91,6 +95,14 @@ string.h
 /home/enver/Projects/TermProject/backend/database/db_connector.h
 ../models/hospitalModel.h
 /home/enver/Projects/TermProject/backend/domain/models/hospitalModel.h
+
+/home/enver/Projects/TermProject/backend/domain/repositories/queueRepository.h
+string.h
+-
+../../database/db_connector.h
+/home/enver/Projects/TermProject/backend/database/db_connector.h
+../models/queueModel.h
+/home/enver/Projects/TermProject/backend/domain/models/queueModel.h
 
 /home/enver/Projects/TermProject/backend/domain/repositories/userRepository.h
 string.h
@@ -124,6 +136,14 @@ string.h
 ../repositories/hospitalRepository.h
 /home/enver/Projects/TermProject/backend/domain/repositories/hospitalRepository.h
 
+/home/enver/Projects/TermProject/backend/domain/services/queueService.c
+../../routes/request.h
+/home/enver/Projects/TermProject/backend/routes/request.h
+../models/response.h
+/home/enver/Projects/TermProject/backend/domain/models/response.h
+../repositories/queueRepository.h
+/home/enver/Projects/TermProject/backend/domain/repositories/queueRepository.h
+
 /home/enver/Projects/TermProject/backend/domain/services/serviceList.h
 userService.c
 /home/enver/Projects/TermProject/backend/domain/services/userService.c
@@ -133,6 +153,8 @@ diseaseService.c
 /home/enver/Projects/TermProject/backend/domain/services/diseaseService.c
 hospitalService.c
 /home/enver/Projects/TermProject/backend/domain/services/hospitalService.c
+queueService.c
+/home/enver/Projects/TermProject/backend/domain/services/queueService.c
 
 /home/enver/Projects/TermProject/backend/domain/services/userService.c
 ../../routes/request.h
