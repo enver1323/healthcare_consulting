@@ -76,5 +76,4 @@ fillDiseaseModel(int id, char *name, int treats, int palliates, int total_edges,
     return disease;
 }
 
-
 #endif

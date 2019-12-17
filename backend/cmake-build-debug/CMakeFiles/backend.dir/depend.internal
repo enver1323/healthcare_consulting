@@ -6,6 +6,7 @@ CMakeFiles/backend.dir/main.c.o
  /home/enver/Projects/TermProject/backend/controller/controller.c
  /home/enver/Projects/TermProject/backend/controller/controllerInjection.h
  /home/enver/Projects/TermProject/backend/database/db_connector.h
+ /home/enver/Projects/TermProject/backend/domain/models/chatModel.h
  /home/enver/Projects/TermProject/backend/domain/models/diseaseModel.h
  /home/enver/Projects/TermProject/backend/domain/models/doctorModel.h
  /home/enver/Projects/TermProject/backend/domain/models/hospitalModel.h
@@ -13,11 +14,13 @@ CMakeFiles/backend.dir/main.c.o
  /home/enver/Projects/TermProject/backend/domain/models/queueModel.h
  /home/enver/Projects/TermProject/backend/domain/models/response.h
  /home/enver/Projects/TermProject/backend/domain/models/userModel.h
+ /home/enver/Projects/TermProject/backend/domain/repositories/chatRepository.h
  /home/enver/Projects/TermProject/backend/domain/repositories/diseaseRepository.h
  /home/enver/Projects/TermProject/backend/domain/repositories/doctorRepository.h
  /home/enver/Projects/TermProject/backend/domain/repositories/hospitalRepository.h
  /home/enver/Projects/TermProject/backend/domain/repositories/queueRepository.h
  /home/enver/Projects/TermProject/backend/domain/repositories/userRepository.h
+ /home/enver/Projects/TermProject/backend/domain/services/chatService.c
  /home/enver/Projects/TermProject/backend/domain/services/diseaseService.c
  /home/enver/Projects/TermProject/backend/domain/services/doctorService.c
  /home/enver/Projects/TermProject/backend/domain/services/hospitalService.c

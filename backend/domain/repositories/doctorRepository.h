@@ -21,9 +21,9 @@ struct Doctor *getDoctorList(int page, int hospital, char *search) {
     int offset = page * IPP_DOCTOR;
     struct Doctor *doctors;
 
-    sprintf(query, "SELECT * FROM %s INNER JOIN %s USING (email) WHERE (name LIKE '%%%s%%' OR email LIKE '%%%s%%')",
-            TABLE_DOCTOR, TABLE_USER, search,
-            search);
+    sprintf(query,
+            "SELECT * FROM %s INNER JOIN %s USING (email) WHERE (name LIKE '%%%s%%' OR email LIKE '%%%s%%' OR hospital_id IN (SELECT id FROM %s WHERE %s.name LIKE '%%%s%%' OR %s.address LIKE '%%%s%%'))",
+            TABLE_DOCTOR, TABLE_USER, search, search, TABLE_HOSPITAL, TABLE_HOSPITAL, search, TABLE_HOSPITAL, search);
 
     if (hospital > 0)
         sprintf(query, "%s AND hospital_id = %d ", query, hospital);

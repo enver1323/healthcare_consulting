@@ -46,6 +46,8 @@ mysql/mysql.h
 stdio.h
 -
 
+/home/enver/Projects/TermProject/backend/domain/models/chatModel.h
+
 /home/enver/Projects/TermProject/backend/domain/models/diseaseModel.h
 
 /home/enver/Projects/TermProject/backend/domain/models/doctorModel.h
@@ -63,6 +65,8 @@ userModel.h
 /home/enver/Projects/TermProject/backend/domain/models/userModel.h
 queueModel.h
 /home/enver/Projects/TermProject/backend/domain/models/queueModel.h
+chatModel.h
+/home/enver/Projects/TermProject/backend/domain/models/chatModel.h
 
 /home/enver/Projects/TermProject/backend/domain/models/queueModel.h
 
@@ -70,6 +74,16 @@ queueModel.h
 modelList.h
 /home/enver/Projects/TermProject/backend/domain/models/modelList.h
 
+/home/enver/Projects/TermProject/backend/domain/models/userModel.h
+
+/home/enver/Projects/TermProject/backend/domain/repositories/chatRepository.h
+string.h
+-
+../../database/db_connector.h
+/home/enver/Projects/TermProject/backend/database/db_connector.h
+../models/chatModel.h
+/home/enver/Projects/TermProject/backend/domain/models/chatModel.h
+../models/userModel.h
 /home/enver/Projects/TermProject/backend/domain/models/userModel.h
 
 /home/enver/Projects/TermProject/backend/domain/repositories/diseaseRepository.h
@@ -112,6 +126,14 @@ string.h
 ../models/userModel.h
 /home/enver/Projects/TermProject/backend/domain/models/userModel.h
 
+/home/enver/Projects/TermProject/backend/domain/services/chatService.c
+../../routes/request.h
+/home/enver/Projects/TermProject/backend/routes/request.h
+../models/response.h
+/home/enver/Projects/TermProject/backend/domain/models/response.h
+../repositories/chatRepository.h
+/home/enver/Projects/TermProject/backend/domain/repositories/chatRepository.h
+
 /home/enver/Projects/TermProject/backend/domain/services/diseaseService.c
 ../../routes/request.h
 /home/enver/Projects/TermProject/backend/routes/request.h
@@ -145,16 +167,18 @@ string.h
 /home/enver/Projects/TermProject/backend/domain/repositories/queueRepository.h
 
 /home/enver/Projects/TermProject/backend/domain/services/serviceList.h
+chatService.c
+/home/enver/Projects/TermProject/backend/domain/services/chatService.c
 userService.c
 /home/enver/Projects/TermProject/backend/domain/services/userService.c
+queueService.c
+/home/enver/Projects/TermProject/backend/domain/services/queueService.c
 doctorService.c
 /home/enver/Projects/TermProject/backend/domain/services/doctorService.c
 diseaseService.c
 /home/enver/Projects/TermProject/backend/domain/services/diseaseService.c
 hospitalService.c
 /home/enver/Projects/TermProject/backend/domain/services/hospitalService.c
-queueService.c
-/home/enver/Projects/TermProject/backend/domain/services/queueService.c
 
 /home/enver/Projects/TermProject/backend/domain/services/userService.c
 ../../routes/request.h

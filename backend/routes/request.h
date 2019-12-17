@@ -23,7 +23,6 @@
 #define METHOD_DELETE "methodDelete"
 
 #define MODULE_CHAT "moduleChat"
-#define METHOD_START "methodStart"
 
 struct Route {
     char module[1024];
@@ -44,8 +43,8 @@ struct Request {
     char password[1024];
     char description[1024];
 
-    char doctorEmail[1024];
-    char patientEmail[1024];
+    char doctorEmail[256];
+    char patientEmail[256];
 };
 
 #endif

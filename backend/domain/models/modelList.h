@@ -9,5 +9,6 @@
 #include "diseaseModel.h"
 #include "userModel.h"
 #include "queueModel.h"
+#include "chatModel.h"
 
 #endif

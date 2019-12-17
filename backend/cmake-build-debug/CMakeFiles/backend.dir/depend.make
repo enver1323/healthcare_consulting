@@ -5,6 +5,7 @@ CMakeFiles/backend.dir/main.c.o: ../controller/clientsInjection.h
 CMakeFiles/backend.dir/main.c.o: ../controller/controller.c
 CMakeFiles/backend.dir/main.c.o: ../controller/controllerInjection.h
 CMakeFiles/backend.dir/main.c.o: ../database/db_connector.h
+CMakeFiles/backend.dir/main.c.o: ../domain/models/chatModel.h
 CMakeFiles/backend.dir/main.c.o: ../domain/models/diseaseModel.h
 CMakeFiles/backend.dir/main.c.o: ../domain/models/doctorModel.h
 CMakeFiles/backend.dir/main.c.o: ../domain/models/hospitalModel.h
@@ -12,11 +13,13 @@ CMakeFiles/backend.dir/main.c.o: ../domain/models/modelList.h
 CMakeFiles/backend.dir/main.c.o: ../domain/models/queueModel.h
 CMakeFiles/backend.dir/main.c.o: ../domain/models/response.h
 CMakeFiles/backend.dir/main.c.o: ../domain/models/userModel.h
+CMakeFiles/backend.dir/main.c.o: ../domain/repositories/chatRepository.h
 CMakeFiles/backend.dir/main.c.o: ../domain/repositories/diseaseRepository.h
 CMakeFiles/backend.dir/main.c.o: ../domain/repositories/doctorRepository.h
 CMakeFiles/backend.dir/main.c.o: ../domain/repositories/hospitalRepository.h
 CMakeFiles/backend.dir/main.c.o: ../domain/repositories/queueRepository.h
 CMakeFiles/backend.dir/main.c.o: ../domain/repositories/userRepository.h
+CMakeFiles/backend.dir/main.c.o: ../domain/services/chatService.c
 CMakeFiles/backend.dir/main.c.o: ../domain/services/diseaseService.c
 CMakeFiles/backend.dir/main.c.o: ../domain/services/doctorService.c
 CMakeFiles/backend.dir/main.c.o: ../domain/services/hospitalService.c
