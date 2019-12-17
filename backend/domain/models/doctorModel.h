@@ -6,7 +6,7 @@
 
 #define TABLE_DOCTOR "doctors"
 
-#define IPP_DOCTOR 4
+#define IPP_DOCTOR 10
 
 struct Doctor {
     int id;

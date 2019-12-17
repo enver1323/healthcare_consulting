@@ -4,7 +4,7 @@
 #ifndef HOSPITAL_MODEL_H
 #define HOSPITAL_MODEL_H
 
-#define IPP_HOSPITAL 4
+#define IPP_HOSPITAL 10
 #define TABLE_HOSPITAL "hospitals"
 
 struct Hospital {
