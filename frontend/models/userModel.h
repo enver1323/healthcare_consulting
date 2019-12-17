@@ -4,7 +4,7 @@
 #ifndef USER_MODEL_H
 #define USER_MODEL_H
 
-#define TABLE "users"
+#define TABLE_USER "users"
 #define IPP_USER 10
 
 #pragma pack(1)

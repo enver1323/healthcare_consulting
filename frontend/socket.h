@@ -48,6 +48,7 @@ int initSocket()
     sprintf(request.route.method, METHOD_LIST);
     request.hospital_id = 0;
     request.page = 0;
+    sprintf(request.search,"%s", "Sultanov");
 
     send(sock, &request, sizeof(request), 0);
 
@@ -55,9 +56,9 @@ int initSocket()
 
     read(sock, &response, sizeof(response));
 
-    printf("%d", response.code);
+    printf("%d\n", response.code);
     for(int i = 0; i < IPP_DOCTOR; i++){
-        printf("%d", response.data.doctorList[i].id);
+        printf("%s\n", response.data.doctorList[i].name);
     }
 
     close(sock);

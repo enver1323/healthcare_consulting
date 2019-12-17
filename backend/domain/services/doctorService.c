@@ -13,8 +13,9 @@ struct Response doctorList(struct Request request) {
 
     struct Doctor *doctors = getDoctorList(request.page, request.hospital_id, request.search);
 
-    for (int i = 0; i < IPP_DOCTOR; i++)
+    for (int i = 0; i < IPP_DOCTOR; i++) {
         response.data.doctorList[i] = doctors[i];
+    }
 
     free(doctors);
 

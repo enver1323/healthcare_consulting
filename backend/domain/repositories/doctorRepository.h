@@ -19,12 +19,15 @@ struct Doctor *getDoctorList(int page, int hospital, char *search) {
     int offset = page * IPP_DOCTOR;
     struct Doctor *doctors;
 
-    sprintf(query, "SELECT * FROM %s WHERE name LIKE '%%%s%%' OR email LIKE '%%%s%%'", TABLE_DOCTOR, search, search);
+    sprintf(query, "SELECT * FROM %s WHERE name LIKE '%%%s%%' OR email LIKE '%%%s%%' ORDER BY id DESC", TABLE_DOCTOR, search,
+            search);
 
     if (hospital > 0)
         sprintf(query, "AND hospital_id = %d ", hospital);
 
     sprintf(query, "%s LIMIT %d OFFSET %d", query, IPP_DOCTOR, offset);
+
+    printf("%s", query);
 
     MYSQL *conn = estDBConnection();
 
