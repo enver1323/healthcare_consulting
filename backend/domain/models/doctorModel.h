@@ -11,6 +11,7 @@
 struct Doctor {
     int id;
     int hospital_id;
+    int order;
     char name[256];
     char email[256];
     char phone[256];

@@ -10,13 +10,13 @@
 /** Function Declarations */
 struct Response userRegister(struct Request request);
 
-struct Response userLogin(int sd, struct Request request);
+struct Response userLogin(struct Client *client, struct Request request);
 
-int findClientIndex(int socket);
+struct Response userRestoreSession(struct Client *client, struct Request request);
 
-int startUserSession(int sd, struct User user);
+int startUserSession(struct Client *client, struct User user);
 
-int closeUserSession(int socket);
+int closeUserSession(struct Client *client);
 
 struct Response userRegister(struct Request request) {
     struct User user = createUser(request.name, request.email, request.password);
@@ -33,12 +33,12 @@ struct Response userRegister(struct Request request) {
     return response;
 }
 
-struct Response userLogin(int sd, struct Request request) {
+struct Response userLogin(struct Client *client, struct Request request) {
     struct User user = loginUser(request.email, request.password);
     struct Response response;
 
     if (strlen(user.email)) {
-        startUserSession(sd, user);
+        startUserSession(client, user);
 
         response.code = CODE_SUCCESS;
         sprintf(response.message, MESSAGE_SUCCESS);
@@ -51,30 +51,35 @@ struct Response userLogin(int sd, struct Request request) {
     return response;
 }
 
-int startUserSession(int socket, struct User user) {
-    int index = findClientIndex(socket);
-    if(index == -1)
-        return EXIT_FAILURE;
+struct Response userRestoreSession(struct Client *client, struct Request request){
+    struct User user  = getUser(request.email);
+    struct Response response;
 
-    clientModels[index] = user;
+    if (strlen(user.email)) {
+        startUserSession(client, user);
+
+        response.code = CODE_SUCCESS;
+        sprintf(response.message, MESSAGE_SUCCESS);
+        response.data.userNode = user;
+    } else {
+        response.code = CODE_ERROR_INTERNAL;
+        sprintf(response.message, "%s", user.error);
+    }
+
+    return response;
+}
+
+int startUserSession(struct Client *client, struct User user) {
+    client->userModel = user;
     return EXIT_SUCCESS;
 }
 
-int closeUserSession(int socket) {
-    int index = findClientIndex(socket);
-    if(index == -1)
-        return EXIT_FAILURE;
-
+int closeUserSession(struct Client *client) {
     struct User user;
-    clientModels[index] = user;
+    client->userModel = user;
+
+    close(client->socket);
+    client->socket = 0;
 
     return EXIT_SUCCESS;
-}
-
-int findClientIndex(int socket){
-    for(int i = 0; i < MAX_CLIENTS; i++)
-        if(clients[i] == socket)
-            return i;
-
-    return -1;
 }

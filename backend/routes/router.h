@@ -8,11 +8,11 @@
 #include "../domain/services/serviceList.h"
 
 /** Function Declarations */
-int handleRequest(int sd, struct Request *request);
+int handleRequest(struct Client *client, struct Request *request);
 
 int sendResponse(int sd, struct Response response);
 
-int handleRequest(int sd, struct Request *request) {
+int handleRequest(struct Client *client, struct Request *request) {
     struct Response response;
     struct Route route = request->route;
 
@@ -20,62 +20,72 @@ int handleRequest(int sd, struct Request *request) {
         if (strcmp(METHOD_REGISTER, route.method) == 0) {
             response = userRegister(*request);
 
-            if (sendResponse(sd, response))
+            if (sendResponse(client->socket, response))
                 return EXIT_FAILURE;
         } else if (strcmp(METHOD_LOGIN, route.method) == 0) {
-            response = userLogin(sd, *request);
+            response = userLogin(client, *request);
 
-            if (sendResponse(sd, response))
+            if (sendResponse(client->socket, response))
+                return EXIT_FAILURE;
+        } else if (strcmp(METHOD_RESTORE, route.method) == 0) {
+            response = userRestoreSession(client, *request);
+
+            if (sendResponse(client->socket, response))
                 return EXIT_FAILURE;
         }
     } else if (strcmp(route.module, MODULE_DOCTOR) == 0) {
         if (strcmp(route.method, METHOD_LIST) == 0) {
-            response = doctorList(*request);
+            response = doctorList(client, *request);
 
-            if (sendResponse(sd, response))
+            if (sendResponse(client->socket, response))
                 return EXIT_FAILURE;
         }
     } else if (strcmp(route.module, MODULE_HOSPITAL) == 0) {
         if (strcmp(route.method, METHOD_LIST) == 0) {
             response = hospitalList(*request);
 
-            if (sendResponse(sd, response))
+            if (sendResponse(client->socket, response))
                 return EXIT_FAILURE;
         } else if (strcmp(route.method, METHOD_SHOW) == 0) {
-            response = hospitalNode(*request);
+            response = hospitalNode(client, *request);
 
-            if (sendResponse(sd, response))
+            if (sendResponse(client->socket, response))
                 return EXIT_FAILURE;
         }
     } else if (strcmp(route.module, MODULE_DISEASE) == 0) {
         if (strcmp(route.method, METHOD_LIST) == 0) {
             response = diseaseList(*request);
 
-            if (sendResponse(sd, response))
+            if (sendResponse(client->socket, response))
                 return EXIT_FAILURE;
         }
     } else if (strcmp(route.module, MODULE_QUEUE) == 0) {
         if (strcmp(route.method, METHOD_ADD) == 0) {
             response = queueAdd(*request);
 
-            if (sendResponse(sd, response))
+            if (sendResponse(client->socket, response))
                 return EXIT_FAILURE;
         } else if (strcmp(route.method, METHOD_DELETE) == 0) {
             response = queueDelete(*request);
 
-            if (sendResponse(sd, response))
+            if (sendResponse(client->socket, response))
+                return EXIT_FAILURE;
+        } else if (strcmp(route.method, METHOD_LIST) == 0) {
+            response = queueList(*request);
+
+            if (sendResponse(client->socket, response))
                 return EXIT_FAILURE;
         }
     } else if (strcmp(route.module, MODULE_CHAT) == 0) {
         if (strcmp(route.method, METHOD_LIST) == 0) {
             response = chatList(*request);
 
-            if (sendResponse(sd, response))
+            if (sendResponse(client->socket, response))
                 return EXIT_FAILURE;
-        } else if (strcmp(route.method, METHOD_DELETE) == 0) {
-            response = queueDelete(*request);
+        } else if (strcmp(route.method, METHOD_ADD) == 0) {
+            response = startChat(*request);
 
-            if (sendResponse(sd, response))
+            if (sendResponse(client->socket, response))
                 return EXIT_FAILURE;
         }
     }

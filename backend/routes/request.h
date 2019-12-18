@@ -4,10 +4,13 @@
 #ifndef REQUEST_H
 #define REQUEST_H
 
+#include "../controller/clientsInjection.h"
+
 #define MODULE_DEFAULT "defaultModule"
 
 #define MODULE_AUTH "moduleAuth"
 #define METHOD_REGISTER "methodRegister"
+#define METHOD_RESTORE "methodRestore"
 #define METHOD_LOGIN "methodLogin"
 
 #define MODULE_HOSPITAL "moduleHospital"

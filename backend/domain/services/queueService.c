@@ -9,11 +9,9 @@
 struct Response queueAdd(struct Request request) {
     struct Response response;
 
-    struct Queue queue = enqueue(request.doctorEmail, request.patientEmail);
-
     response.code = 200;
-    response.data.queueNode = queue;
     sprintf(response.message, "%s", MESSAGE_SUCCESS);
+    response.data.queueNode = enqueue(request.doctorEmail, request.patientEmail);;
 
     return response;
 }
@@ -21,13 +19,28 @@ struct Response queueAdd(struct Request request) {
 struct Response queueDelete(struct Request request) {
     struct Response response;
 
-    if(dequeue(request.doctorEmail, request.patientEmail)){
+    if (dequeue(request.doctorEmail, request.patientEmail)) {
         response.code = CODE_ERROR_INTERNAL;
         sprintf(response.message, "%s", MESSAGE_ERROR);
-    }else{
+    } else {
         response.code = CODE_SUCCESS;
         sprintf(response.message, "%s", MESSAGE_SUCCESS);
     }
+
+    return response;
+}
+
+struct Response queueList(struct Request request) {
+    struct Response response;
+    struct Queue *queues = getQueueList(request.page, request.email);
+
+    for(int i = 0; i < IPP_QUEUE; i++)
+        response.data.queueList[i] = queues[i];
+
+    free(queues);
+
+    response.code = 200;
+    sprintf(response.message, "%s", MESSAGE_SUCCESS);
 
     return response;
 }

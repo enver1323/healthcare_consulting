@@ -41,7 +41,7 @@ struct Disease *getDiseaseList(int page, char *search) {
 }
 
 struct Disease *fillDiseaseModels(MYSQL_RES *result) {
-    struct Disease *diseases = malloc(sizeof(struct Disease) * IPP_DISEASE);
+    struct Disease *diseases = calloc(IPP_DISEASE, sizeof(struct Disease));
     int counter = 0;
     MYSQL_ROW row;
 
@@ -50,9 +50,6 @@ struct Disease *fillDiseaseModels(MYSQL_RES *result) {
                                                atoi(row[3]), atoi(row[4]), row[5],
                                                row[6] != NULL && strlen(row[6]) ? atof(row[6]) : 0.0,
                                                row[7] != NULL && strlen(row[7]) ? row[7] : "");
-
-    for (; counter < IPP_DOCTOR;)
-        diseases[counter++] = fillDiseaseModel(0, "", 0, 0, 0, "", 0.0, "");
 
     mysql_free_result(result);
 

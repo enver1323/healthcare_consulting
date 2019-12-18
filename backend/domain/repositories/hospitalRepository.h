@@ -60,15 +60,12 @@ struct Hospital getHospital(int id) {
 }
 
 struct Hospital *fillHospitalModels(MYSQL_RES *result) {
-    struct Hospital *hospitals = malloc(sizeof(struct Hospital) * IPP_HOSPITAL);
+    struct Hospital *hospitals = calloc(IPP_HOSPITAL, sizeof(struct Hospital));
     int counter = 0;
     MYSQL_ROW row;
 
     while ((row = mysql_fetch_row(result)) != NULL)
         hospitals[counter++] = fillHospitalModel(atoi(row[0]), row[1], row[2]);
-
-    for (; counter < IPP_DOCTOR;)
-        hospitals[counter++] = fillHospitalModel(0, "", "");
 
     mysql_free_result(result);
 

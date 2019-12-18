@@ -12,6 +12,12 @@
 /** Function Declarations */
 struct Queue enqueue(char *doctor, char *patient);
 
+struct Queue *getQueueList(int page, char *email);
+
+struct Queue *fillQueueModels(MYSQL_RES *result);
+
+struct Queue fillQueueModel(char *doctor, char *patient, int order);
+
 int dequeue(char *doctor, char *patient);
 
 struct Queue enqueue(char *doctor, char *patient) {
@@ -60,5 +66,52 @@ int dequeue(char *doctor, char *patient) {
 
     return EXIT_SUCCESS;
 }
+
+struct Queue *getQueueList(int page, char *email) {
+    char query[1024];
+    int offset = page * IPP_QUEUE;
+    struct Queue *queues;
+
+    sprintf(query,
+            "SELECT * FROM %s WHERE patient_email = '%s' OR doctor_email = '%s' ORDER BY `order` DESC LIMIT %d OFFSET %d",
+            TABLE_QUEUE, email, email, IPP_QUEUE, offset);
+
+    fprintf(stderr, "%s", query);
+
+    MYSQL *conn = estDBConnection();
+
+    makeDBQuery(conn, query);
+    MYSQL_RES *result = getDBResult(conn);
+
+    queues = fillQueueModels(result);
+
+    closeDBConnection(conn);
+
+    return queues;
+}
+
+struct Queue *fillQueueModels(MYSQL_RES *result) {
+    struct Queue *queues = calloc(IPP_QUEUE, sizeof(struct Queue));
+    int counter = 0;
+    MYSQL_ROW row;
+
+    while ((row = mysql_fetch_row(result)) != NULL)
+        queues[counter++] = fillQueueModel(row[0], row[1], atoi(row[2]));
+
+    mysql_free_result(result);
+
+    return queues;
+}
+
+struct Queue fillQueueModel(char *doctor, char *patient, int order) {
+    struct Queue queue;
+
+    queue.order = order;
+    sprintf(queue.doctor_email, "%s", doctor);
+    sprintf(queue.patient_email, "%s", patient);
+
+    return queue;
+}
+
 
 #endif //BACKEND_QUEUEREPOSITORY_H

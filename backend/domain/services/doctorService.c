@@ -5,10 +5,10 @@
 #include "../models/response.h"
 #include "../repositories/doctorRepository.h"
 
-struct Response doctorList(struct Request request) {
+struct Response doctorList(struct Client *client, struct Request request) {
     struct Response response;
 
-    struct Doctor *doctors = getDoctorList(request.page, request.hospital_id, request.search);
+    struct Doctor *doctors = getDoctorList(client->userModel.email, request.page, request.hospital_id, request.search);
 
     for (int i = 0; i < IPP_DOCTOR; i++)
         response.data.doctorList[i] = doctors[i];

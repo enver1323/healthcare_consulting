@@ -23,10 +23,10 @@ struct Response hospitalList(struct Request request) {
     return response;
 }
 
-struct Response hospitalNode(struct Request request) {
+struct Response hospitalNode(struct Client *client, struct Request request) {
     struct Response response;
     struct Hospital hospital = getHospital(request.id);
-    struct Doctor *doctors = getDoctorList(request.page, hospital.id, "");
+    struct Doctor *doctors = getDoctorList(client->userModel.email, request.page, hospital.id, "");
 
     for (int i = 0; i < IPP_DOCTOR; i++)
         hospital.doctorList[i] = doctors[i];

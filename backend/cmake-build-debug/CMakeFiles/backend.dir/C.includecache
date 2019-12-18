@@ -35,8 +35,6 @@ netinet/in.h
 -
 sys/time.h
 -
-clientsInjection.h
-/home/enver/Projects/TermProject/backend/controller/clientsInjection.h
 ../routes/router.h
 /home/enver/Projects/TermProject/backend/routes/router.h
 
@@ -197,6 +195,8 @@ controller/controller.c
 /home/enver/Projects/TermProject/backend/controller/controller.c
 
 /home/enver/Projects/TermProject/backend/routes/request.h
+../controller/clientsInjection.h
+/home/enver/Projects/TermProject/backend/controller/clientsInjection.h
 
 /home/enver/Projects/TermProject/backend/routes/router.h
 ../domain/services/serviceList.h

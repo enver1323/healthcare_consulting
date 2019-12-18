@@ -44,7 +44,7 @@ int initMasterSocket() {
     int opt = TRUE;
 
     for (int i = 0; i < MAX_CLIENTS; i++)
-        clients[i] = 0;
+        clients[i].socket = 0;
 
     /** Create master controller */
     if ((masterSocket = socket(AF_INET, SOCK_STREAM, 0)) == 0) {
@@ -98,7 +98,7 @@ int handleConnections() {
         /** Add child sockets to set */
         for (int i = 0; i < MAX_CLIENTS; i++) {
             /** Controller Descriptor */
-            curSd = clients[i];
+            curSd = clients[i].socket;
             /** Add to read list if valid */
             if (curSd > 0)
                 FD_SET(curSd, &readFds);
@@ -121,7 +121,7 @@ int handleConnections() {
 
         /** Handle request from non-master controller (request to other controller)*/
         for (int i = 0; i < MAX_CLIENTS; i++) {
-            curSd = clients[i];
+            curSd = clients[i].socket;
             if (FD_ISSET(curSd, &readFds)) {
                 /** Read incoming request and check if is closing one */
                 if (read(curSd, &request, sizeof(struct Request)) == 0) {
@@ -130,12 +130,10 @@ int handleConnections() {
                     printf("Host disconnected , ip %s , port %d \n", inet_ntoa(address.sin_addr),
                            ntohs(address.sin_port));
 
-                    closeUserSession(curSd);
-                    close(curSd);
-                    clients[i] = 0;
+                    closeUserSession(&clients[i]);
                 } else {
                     /** Handle incoming request */
-                    if (handleRequest(curSd, &request))
+                    if (handleRequest(&clients[i], &request))
                         fprintf(stderr, "Failed to handle request");
                 }
             }
@@ -158,8 +156,8 @@ int handleNewConnection() {
 
         /** Add new controller to an array of sockets */
         for (int i = 0; i < MAX_CLIENTS; i++)
-            if (clients[i] == 0) {
-                clients[i] = newSocket;
+            if (clients[i].socket == 0) {
+                clients[i].socket = newSocket;
                 printf("Adding to list of sockets as %d\n", i);
                 break;
             }

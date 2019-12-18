@@ -10,6 +10,8 @@
 
 /** Function Declarations */
 
+struct User getUser(char *email);
+
 struct User loginUser(char *email, char *password);
 
 struct User *fillUserModels(MYSQL_RES *result);
@@ -55,8 +57,30 @@ struct User loginUser(char *email, char *password) {
     return user;
 }
 
+struct User getUser(char *email) {
+    struct User *users, user;
+
+    MYSQL *conn = estDBConnection();
+    char query[1024];
+
+    sprintf(query, "SELECT * FROM %s WHERE email = '%s'", TABLE_USER, email);
+
+    if (makeDBQuery(conn, query))
+        sprintf(user.error, "%s", getDBError(conn));
+
+    MYSQL_RES *result = getDBResult(conn);
+
+    users = fillUserModels(result);
+    user = users[0];
+    free(users);
+
+    closeDBConnection(conn);
+
+    return user;
+}
+
 struct User *fillUserModels(MYSQL_RES *result) {
-    struct User *users = malloc(sizeof(struct User) * IPP_USER);
+    struct User *users = calloc(IPP_USER, sizeof(struct User));
     int counter = 0;
     MYSQL_ROW row;
 

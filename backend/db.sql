@@ -36,7 +36,7 @@ CREATE TABLE `chats` (
 
 LOCK TABLES `chats` WRITE;
 /*!40000 ALTER TABLE `chats` DISABLE KEYS */;
-INSERT INTO `chats` VALUES (1,'enver1323@gmail.com','enver@info.uz'),(2,'bolkunova@mail.ru','enver1323@gmail.com');
+INSERT INTO `chats` VALUES (1,'enver1323@gmail.com','info@enver.uz'),(2,'bolkunova@mail.ru','enver1323@gmail.com');
 /*!40000 ALTER TABLE `chats` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -180,4 +180,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-12-18  2:45:53
+-- Dump completed on 2019-12-19  0:52:19

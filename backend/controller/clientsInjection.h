@@ -9,7 +9,22 @@
 
 #include "../domain/models/userModel.h"
 
-static int clients[MAX_CLIENTS];
-static struct User clientModels[MAX_CLIENTS];
+//static int clients[MAX_CLIENTS];
+//static struct User clientModels[MAX_CLIENTS];
+
+struct Client{
+    int socket;
+    struct User userModel;
+};
+
+static struct Client clients[MAX_CLIENTS];
+
+//struct User getUserModelBySocket(int sd);
+//
+//struct User getUserModelBySocket(int sd){
+//    for(int i = 0; i < MAX_CLIENTS; i++)
+//        if(clients[i] == sd)
+//            return clientModels[i];
+//}
 
 #endif

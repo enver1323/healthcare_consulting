@@ -23,7 +23,9 @@ struct Data{
         struct Hospital hospitalList[IPP_HOSPITAL];
         struct Disease diseaseList[IPP_DISEASE];
         struct Queue queueNode;
+        struct Queue queueList[IPP_QUEUE];
         struct User userNode;
+        struct Chat chatNode;
         struct Chat chatList[IPP_CHAT];
     };
 };
