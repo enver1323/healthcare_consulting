@@ -59,13 +59,13 @@ int initSocket() {
     }
 
     restoreSession();
-    makeRequest(0);
-//    pthread_create(&threads[0], NULL, rcvMsgs, (void *) 0);
+//    makeRequest(0);
+    pthread_create(&threads[0], NULL, rcvMsgs, (void *) 0);
 
-//    pthread_create(&threads[1], NULL, sendMsgs, (void *) 1);
-//    while (1) {
+    pthread_create(&threads[1], NULL, sendMsgs, (void *) 1);
+    while (1) {
 
-//    }
+    }
 
     close(sock);
 

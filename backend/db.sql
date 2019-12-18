@@ -26,7 +26,8 @@ CREATE TABLE `chats` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user1` varchar(256) NOT NULL,
   `user2` varchar(256) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `chats_pk` (`user1`,`user2`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -36,7 +37,7 @@ CREATE TABLE `chats` (
 
 LOCK TABLES `chats` WRITE;
 /*!40000 ALTER TABLE `chats` DISABLE KEYS */;
-INSERT INTO `chats` VALUES (1,'enver1323@gmail.com','info@enver.uz'),(2,'bolkunova@mail.ru','enver1323@gmail.com');
+INSERT INTO `chats` VALUES (2,'bolkunova@mail.ru','enver1323@gmail.com'),(1,'enver1323@gmail.com','info@enver.uz');
 /*!40000 ALTER TABLE `chats` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -121,6 +122,32 @@ INSERT INTO `hospitals` VALUES (1,'﻿ЎZBEKISTON RESPUBLIKASI SOҒLIQNI SAQLASh
 UNLOCK TABLES;
 
 --
+-- Table structure for table `messages`
+--
+
+DROP TABLE IF EXISTS `messages`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `messages` (
+  `chat_id` int(11) NOT NULL,
+  `sender_email` varchar(256) NOT NULL,
+  `receiver_email` varchar(256) NOT NULL,
+  `text` varchar(256) NOT NULL,
+  `time` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `messages`
+--
+
+LOCK TABLES `messages` WRITE;
+/*!40000 ALTER TABLE `messages` DISABLE KEYS */;
+INSERT INTO `messages` VALUES (1,'enver1323@gmail.com','info@enver.uz','test\n',465044),(1,'info@enver.uz','enver1323@gmail.com','hello\n',465404),(1,'enver1323@gmail.com','info@enver.uz','yeah booooy\n',465600);
+/*!40000 ALTER TABLE `messages` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `queues`
 --
 
@@ -142,7 +169,7 @@ CREATE TABLE `queues` (
 
 LOCK TABLES `queues` WRITE;
 /*!40000 ALTER TABLE `queues` DISABLE KEYS */;
-INSERT INTO `queues` VALUES ('info@enver.uz','bolkunova@mail.ru',2),('info@enver.uz','enver1323@gmail.com',1);
+INSERT INTO `queues` VALUES ('','info@enver.uz',1),('info@enver.uz','abduhakim.muminov@minzdrav.uz',3),('info@enver.uz','bolkunova@mail.ru',2),('info@enver.uz','enver1323@gmail.com',1);
 /*!40000 ALTER TABLE `queues` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -180,4 +207,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-12-19  0:52:19
+-- Dump completed on 2019-12-19  3:12:40

@@ -1,1 +1,0 @@
-/usr/bin/cc  -std=c99 -g   CMakeFiles/backend.dir/main.c.o  -o backend -lmysqlclient -pthread 

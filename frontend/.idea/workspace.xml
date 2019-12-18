@@ -13,9 +13,38 @@
   <component name="ChangeListManager">
     <list default="true" id="16351adf-b248-4923-aaef-73133ab3c5ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/domain/repositories/messageRepository.h" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/domain/repositories/messageRepository.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client.h" beforeDir="false" afterPath="$PROJECT_DIR$/client.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/frontend.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/frontend.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/frontend.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/frontend.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/frontend.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/frontend.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/frontend.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/frontend.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/frontend.dir/main.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/frontend.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/frontend" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/frontend.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket.h" beforeDir="false" afterPath="$PROJECT_DIR$/socket.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +143,7 @@
       <workItem from="1576603062574" duration="11055000" />
       <workItem from="1576683731589" duration="10000" />
       <workItem from="1576683962469" duration="28000" />
-      <workItem from="1576686309662" duration="11236000" />
+      <workItem from="1576686309662" duration="11739000" />
     </task>
     <servers />
   </component>
@@ -138,22 +167,22 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="743" y="313" width="424" height="487" key="FileChooserDialogImpl/0.30.1920.1050@0.30.1920.1050" timestamp="1576683988457" />
-    <state width="1874" height="317" key="GridCell.Tab.0.bottom" timestamp="1576705860494">
+    <state width="1874" height="317" key="GridCell.Tab.0.bottom" timestamp="1576706742730">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1874" height="317" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1576705860494" />
-    <state width="1874" height="317" key="GridCell.Tab.0.center" timestamp="1576705860494">
+    <state width="1874" height="317" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1576706742730" />
+    <state width="1874" height="317" key="GridCell.Tab.0.center" timestamp="1576706742729">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1874" height="317" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1576705860494" />
-    <state width="1874" height="317" key="GridCell.Tab.0.left" timestamp="1576705860494">
+    <state width="1874" height="317" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1576706742729" />
+    <state width="1874" height="317" key="GridCell.Tab.0.left" timestamp="1576706742729">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1874" height="317" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1576705860494" />
-    <state width="1874" height="317" key="GridCell.Tab.0.right" timestamp="1576705860494">
+    <state width="1874" height="317" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1576706742729" />
+    <state width="1874" height="317" key="GridCell.Tab.0.right" timestamp="1576706742730">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1874" height="317" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1576705860494" />
+    <state width="1874" height="317" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1576706742730" />
     <state width="1874" height="341" key="GridCell.Tab.1.bottom" timestamp="1576577606127">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>

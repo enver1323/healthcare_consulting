@@ -12,8 +12,69 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa3eb853-5290-4b55-81f6-4f63200a255d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/backend.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/backend.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/backend.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/backend.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/backend.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/backend.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/backend.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/backend.dir/link.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/backend.dir/main.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/services/chatService.c" beforeDir="false" afterPath="$PROJECT_DIR$/domain/services/chatService.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/backend.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/backend" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/backend.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/3.15.3/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/frontend.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/frontend.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/frontend.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/frontend.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/frontend.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/frontend.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/frontend.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/frontend.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/frontend.dir/main.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/frontend.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/frontend" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/frontend.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/socket.h" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/socket.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +110,13 @@
         <item name="hcs@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="hcs: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="hcs@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="hcs: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="chats: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -167,7 +235,7 @@
       <workItem from="1576597271627" duration="1816000" />
       <workItem from="1576602948741" duration="672000" />
       <workItem from="1576603631366" duration="15509000" />
-      <workItem from="1576683993322" duration="16916000" />
+      <workItem from="1576683993322" duration="17520000" />
     </task>
     <servers />
   </component>
@@ -195,22 +263,22 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="743" y="313" width="424" height="487" key="FileChooserDialogImpl/0.30.1920.1050@0.30.1920.1050" timestamp="1576686306967" />
-    <state width="1874" height="276" key="GridCell.Tab.0.bottom" timestamp="1576706221785">
+    <state width="1874" height="276" key="GridCell.Tab.0.bottom" timestamp="1576706468080">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1874" height="276" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1576706221785" />
-    <state width="1874" height="276" key="GridCell.Tab.0.center" timestamp="1576706221784">
+    <state width="1874" height="276" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1576706468080" />
+    <state width="1874" height="276" key="GridCell.Tab.0.center" timestamp="1576706468078">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1874" height="276" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1576706221784" />
-    <state width="1874" height="276" key="GridCell.Tab.0.left" timestamp="1576706221783">
+    <state width="1874" height="276" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1576706468078" />
+    <state width="1874" height="276" key="GridCell.Tab.0.left" timestamp="1576706468077">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1874" height="276" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1576706221783" />
-    <state width="1874" height="276" key="GridCell.Tab.0.right" timestamp="1576706221784">
+    <state width="1874" height="276" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1576706468077" />
+    <state width="1874" height="276" key="GridCell.Tab.0.right" timestamp="1576706468079">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1874" height="276" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1576706221784" />
+    <state width="1874" height="276" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1576706468079" />
     <state width="1874" height="264" key="GridCell.Tab.1.bottom" timestamp="1576705035421">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
@@ -231,14 +299,14 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="464" y="190" width="992" height="733" key="SettingsEditor/0.30.1920.1050@0.30.1920.1050" timestamp="1576702807788" />
-    <state x="862" y="452" width="319" height="232" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1576606000812">
+    <state x="862" y="452" width="319" height="232" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1576707067667">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="862" y="452" width="319" height="232" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.30.1920.1050@0.30.1920.1050" timestamp="1576606000812" />
-    <state x="679" y="197" width="552" height="718" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1576703055970">
+    <state x="862" y="452" width="319" height="232" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.30.1920.1050@0.30.1920.1050" timestamp="1576707067667" />
+    <state x="679" y="197" width="552" height="718" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1576707127129">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="679" y="197" width="552" height="718" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1576703055970" />
+    <state x="679" y="197" width="552" height="718" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1576707127129" />
     <state x="100" y="130" width="1720" height="850" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1576412524958">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
@@ -263,10 +331,10 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="623" y="261" width="672" height="678" key="search.everywhere.popup/0.30.1920.1050@0.30.1920.1050" timestamp="1576706214057" />
-    <state x="685" y="469" width="540" height="174" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1576399800318">
+    <state x="685" y="469" width="540" height="174" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1576706962769">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="685" y="469" width="540" height="174" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1576399800318" />
+    <state x="685" y="469" width="540" height="174" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1576706962769" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

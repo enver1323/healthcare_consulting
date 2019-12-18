@@ -945,186 +945,197 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="239" parent="229" name="PRIMARY">
+    <index id="239" parent="229" name="chats_pk">
+      <ColNames>user1
+user2</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="240" parent="229" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="240" parent="230" name="id">
+    <key id="241" parent="229" name="chats_pk">
+      <ColNames>user1
+user2</ColNames>
+      <UnderlyingIndexName>chats_pk</UnderlyingIndexName>
+    </key>
+    <column id="242" parent="230" name="id">
       <Position>1</Position>
       <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="241" parent="230" name="name">
+    <column id="243" parent="230" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="242" parent="230" name="treats">
+    <column id="244" parent="230" name="treats">
       <Position>3</Position>
       <DataType>int(10)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="243" parent="230" name="palliates">
+    <column id="245" parent="230" name="palliates">
       <Position>4</Position>
       <DataType>int(10)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="244" parent="230" name="total_edges">
+    <column id="246" parent="230" name="total_edges">
       <Position>5</Position>
       <DataType>int(10)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="230" name="synonyms">
+    <column id="247" parent="230" name="synonyms">
       <Position>6</Position>
       <DataType>text|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="230" name="auroc">
+    <column id="248" parent="230" name="auroc">
       <Position>7</Position>
       <DataType>float|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="247" parent="230" name="description">
+    <column id="249" parent="230" name="description">
       <Position>8</Position>
       <DataType>text|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="248" parent="230" name="PRIMARY">
+    <key id="250" parent="230" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="249" parent="231" name="hospital_id">
+    <column id="251" parent="231" name="hospital_id">
       <Position>1</Position>
       <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="231" name="email">
+    <column id="252" parent="231" name="email">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
       <Collation>utf8mb4_general_ci</Collation>
     </column>
-    <column id="251" parent="231" name="phone">
+    <column id="253" parent="231" name="phone">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
       <Collation>utf8mb4_general_ci</Collation>
     </column>
-    <key id="252" parent="231" name="PRIMARY">
+    <key id="254" parent="231" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>email</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="253" parent="232" name="id">
+    <column id="255" parent="232" name="id">
       <Position>1</Position>
       <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="232" name="name">
+    <column id="256" parent="232" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="232" name="address">
+    <column id="257" parent="232" name="address">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="256" parent="232" name="PRIMARY">
+    <key id="258" parent="232" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="257" parent="233" name="chat_id">
+    <column id="259" parent="233" name="chat_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="258" parent="233" name="sender_email">
+    <column id="260" parent="233" name="sender_email">
       <Position>2</Position>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="233" name="receiver_email">
+    <column id="261" parent="233" name="receiver_email">
       <Position>3</Position>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="233" name="text">
+    <column id="262" parent="233" name="text">
       <Position>4</Position>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="261" parent="233" name="time">
+    <column id="263" parent="233" name="time">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="262" parent="234" name="doctor_email">
+    <column id="264" parent="234" name="doctor_email">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="234" name="patient_email">
+    <column id="265" parent="234" name="patient_email">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="264" parent="234" name="order">
+    <column id="266" parent="234" name="order">
       <Position>3</Position>
       <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="265" parent="234" name="patient_email">
+    <index id="267" parent="234" name="patient_email">
       <ColNames>patient_email</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="266" parent="234" name="PRIMARY">
+    <key id="268" parent="234" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>doctor_email
 patient_email</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="267" parent="235" name="name">
+    <column id="269" parent="235" name="name">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
       <Collation>utf8mb4_general_ci</Collation>
     </column>
-    <column id="268" parent="235" name="email">
+    <column id="270" parent="235" name="email">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
       <Collation>utf8mb4_general_ci</Collation>
     </column>
-    <column id="269" parent="235" name="password">
+    <column id="271" parent="235" name="password">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
       <Collation>utf8mb4_general_ci</Collation>
     </column>
-    <key id="270" parent="235" name="PRIMARY">
+    <key id="272" parent="235" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>email</ColNames>
       <Primary>1</Primary>
