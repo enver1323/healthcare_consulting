@@ -71,19 +71,29 @@ int handleRequest(struct Client *client, struct Request *request) {
             if (sendResponse(client->socket, response))
                 return EXIT_FAILURE;
         } else if (strcmp(route.method, METHOD_LIST) == 0) {
-            response = queueList(*request);
+            response = queueList(client, *request);
 
             if (sendResponse(client->socket, response))
                 return EXIT_FAILURE;
         }
     } else if (strcmp(route.module, MODULE_CHAT) == 0) {
         if (strcmp(route.method, METHOD_LIST) == 0) {
-            response = chatList(*request);
+            response = chatList(client, *request);
 
             if (sendResponse(client->socket, response))
                 return EXIT_FAILURE;
         } else if (strcmp(route.method, METHOD_ADD) == 0) {
-            response = startChat(*request);
+            response = startChat(client, *request);
+
+            if (sendResponse(client->socket, response))
+                return EXIT_FAILURE;
+        } else if (strcmp(route.method, METHOD_SEND) == 0) {
+            response = sendMessage(client, *request);
+
+            if (sendResponse(client->socket, response))
+                return EXIT_FAILURE;
+        } else if (strcmp(route.method, METHOD_SHOW) == 0) {
+            response = messageList(*request);
 
             if (sendResponse(client->socket, response))
                 return EXIT_FAILURE;

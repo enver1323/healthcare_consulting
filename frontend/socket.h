@@ -28,7 +28,14 @@ void makeRequest(int);
 
 void restoreSession();
 
+void *rcvMsgs(void *threadId);
+
+void *sendMsgs(void *threadId);
+
+
 int initSocket() {
+    pthread_t threads[2];
+
     printf("CREATING CLIENT SOCKET .....\n");
     if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
         printf("\n Socket creation error \n");
@@ -53,6 +60,12 @@ int initSocket() {
 
     restoreSession();
     makeRequest(0);
+//    pthread_create(&threads[0], NULL, rcvMsgs, (void *) 0);
+
+//    pthread_create(&threads[1], NULL, sendMsgs, (void *) 1);
+//    while (1) {
+
+//    }
 
     close(sock);
 
@@ -63,7 +76,7 @@ void restoreSession() {
     struct Request request;
     sprintf(request.route.module, MODULE_AUTH);
     sprintf(request.route.method, METHOD_RESTORE);
-    sprintf(request.email, "enver1323@gmail.com");
+    sprintf(request.email, "info@enver.uz");
 
     send(sock, &request, sizeof(request), 0);
 
@@ -71,18 +84,56 @@ void restoreSession() {
 
     read(sock, &response, sizeof(response));
 
-    printf("\nCODE %d\n", response.code);
-    printf("\nUSER EMAIL: %s\n", response.data.userNode.email);
-    printf("\nUSER NAME: %s\n", response.data.userNode.name);
+    printf("\nCODE %d", response.code);
+    printf("\nUSER EMAIL: %s", response.data.userNode.email);
+    printf("\nUSER NAME: %s", response.data.userNode.name);
+}
+
+void *rcvMsgs(void *threadId) {
+    char buffer[1024] = {0};
+    while (1) {
+        struct Response response;
+        read(sock, &response, sizeof(response));
+        if(response.code == 200 && response.data.messageNode.chatId)
+            printf("\nSender %s:\n %s\n\n", response.data.messageNode.senderEmail, response.data.messageNode.text);
+
+        response.code = 500;
+    }
+    pthread_exit(NULL);
+    return 0;
+}
+
+void *sendMsgs(void *threadId) {
+    char cchat[256];
+    while (1) {
+        memset(cchat, 0, sizeof(cchat));
+        fgets(cchat, sizeof(cchat), stdin);
+
+        struct Request request;
+        sprintf(request.route.module, MODULE_CHAT);
+        sprintf(request.route.method, METHOD_SEND);
+
+        request.id = 1;
+        sprintf(request.email, "enver1323@gmail.com");
+        sprintf(request.text, "%s", cchat);
+
+        send(sock, &request, sizeof(request), 0);
+
+        if (strncmp(cchat, "bye", strlen("bye")) == 0)
+            break;
+    }
+    pthread_exit(NULL);
+    return 0;
 }
 
 void makeRequest(int page) {
     struct Request request;
-    sprintf(request.route.module, MODULE_HOSPITAL);
-    sprintf(request.route.method, METHOD_LIST);
+    sprintf(request.route.module, MODULE_CHAT);
+    sprintf(request.route.method, METHOD_SHOW);
 
-    request.id = 56;
-//    sprintf(request.search, "Abdulhakim");
+    request.id = 1;
+//    sprintf(request.doctorEmail, "info@enver.uz");
+//    sprintf(request.patientEmail, "abduhakim.muminov@minzdrav.uz");
     request.page = page;
 
     send(sock, &request, sizeof(request), 0);
@@ -92,8 +143,9 @@ void makeRequest(int page) {
     read(sock, &response, sizeof(response));
 
     printf("\nCODE %d\n", response.code);
-    for (int i = 0; i < IPP_DOCTOR; i++){
-        printf("%s\n", response.data.hospitalNode.doctorList[i].name);
-        printf("%d\n", response.data.hospitalNode.doctorList[i].order);
+//    printf("\nORDER %d\n", response.data.queueNode.order);
+    for (int i = 0; i < IPP_CHAT; i++){
+//        printf("%s\n", response.data.hospitalNode.doctorList[i].name);
+        printf("%d\n", response.data.chatList[i].id);
     }
 }

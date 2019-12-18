@@ -4,11 +4,13 @@
 #ifndef MODEL_LIST_H
 #define MODEL_LIST_H
 
-#include "doctorModel.h"
-#include "hospitalModel.h"
-#include "diseaseModel.h"
+#include "chatModel.h"
 #include "userModel.h"
 #include "queueModel.h"
-#include "chatModel.h"
+#include "clientModel.h"
+#include "doctorModel.h"
+#include "messageModel.h"
+#include "diseaseModel.h"
+#include "hospitalModel.h"
 
 #endif

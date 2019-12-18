@@ -13,26 +13,38 @@ socket.h
 /home/enver/Projects/TermProject/frontend/socket.h
 
 /home/enver/Projects/TermProject/frontend/models/chatModel.h
+userModel.h
+/home/enver/Projects/TermProject/frontend/models/userModel.h
+
+/home/enver/Projects/TermProject/frontend/models/clientModel.h
+userModel.h
+/home/enver/Projects/TermProject/frontend/models/userModel.h
 
 /home/enver/Projects/TermProject/frontend/models/diseaseModel.h
 
 /home/enver/Projects/TermProject/frontend/models/doctorModel.h
 
 /home/enver/Projects/TermProject/frontend/models/hospitalModel.h
+
+/home/enver/Projects/TermProject/frontend/models/messageModel.h
 
 /home/enver/Projects/TermProject/frontend/models/modelList.h
-doctorModel.h
-/home/enver/Projects/TermProject/frontend/models/doctorModel.h
-hospitalModel.h
-/home/enver/Projects/TermProject/frontend/models/hospitalModel.h
-diseaseModel.h
-/home/enver/Projects/TermProject/frontend/models/diseaseModel.h
+chatModel.h
+/home/enver/Projects/TermProject/frontend/models/chatModel.h
 userModel.h
 /home/enver/Projects/TermProject/frontend/models/userModel.h
 queueModel.h
 /home/enver/Projects/TermProject/frontend/models/queueModel.h
-chatModel.h
-/home/enver/Projects/TermProject/frontend/models/chatModel.h
+clientModel.h
+/home/enver/Projects/TermProject/frontend/models/clientModel.h
+doctorModel.h
+/home/enver/Projects/TermProject/frontend/models/doctorModel.h
+messageModel.h
+/home/enver/Projects/TermProject/frontend/models/messageModel.h
+diseaseModel.h
+/home/enver/Projects/TermProject/frontend/models/diseaseModel.h
+hospitalModel.h
+/home/enver/Projects/TermProject/frontend/models/hospitalModel.h
 
 /home/enver/Projects/TermProject/frontend/models/queueModel.h
 

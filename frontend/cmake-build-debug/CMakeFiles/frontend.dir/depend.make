@@ -3,9 +3,11 @@
 
 CMakeFiles/frontend.dir/main.c.o: ../main.c
 CMakeFiles/frontend.dir/main.c.o: ../models/chatModel.h
+CMakeFiles/frontend.dir/main.c.o: ../models/clientModel.h
 CMakeFiles/frontend.dir/main.c.o: ../models/diseaseModel.h
 CMakeFiles/frontend.dir/main.c.o: ../models/doctorModel.h
 CMakeFiles/frontend.dir/main.c.o: ../models/hospitalModel.h
+CMakeFiles/frontend.dir/main.c.o: ../models/messageModel.h
 CMakeFiles/frontend.dir/main.c.o: ../models/modelList.h
 CMakeFiles/frontend.dir/main.c.o: ../models/queueModel.h
 CMakeFiles/frontend.dir/main.c.o: ../models/response.h

@@ -27,6 +27,8 @@ struct Data{
         struct User userNode;
         struct Chat chatNode;
         struct Chat chatList[IPP_CHAT];
+        struct Message messageNode;
+        struct Message messageList[IPP_MESSAGE];
     };
 };
 

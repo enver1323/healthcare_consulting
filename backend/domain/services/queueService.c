@@ -11,7 +11,7 @@ struct Response queueAdd(struct Request request) {
 
     response.code = 200;
     sprintf(response.message, "%s", MESSAGE_SUCCESS);
-    response.data.queueNode = enqueue(request.doctorEmail, request.patientEmail);;
+    response.data.queueNode = enqueue(request.doctorEmail, request.patientEmail);
 
     return response;
 }
@@ -30,9 +30,9 @@ struct Response queueDelete(struct Request request) {
     return response;
 }
 
-struct Response queueList(struct Request request) {
+struct Response queueList(struct Client *client, struct Request request) {
     struct Response response;
-    struct Queue *queues = getQueueList(request.page, request.email);
+    struct Queue *queues = getQueueList(request.page, client->userModel.email);
 
     for(int i = 0; i < IPP_QUEUE; i++)
         response.data.queueList[i] = queues[i];

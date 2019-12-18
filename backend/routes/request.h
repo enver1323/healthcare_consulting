@@ -23,6 +23,7 @@
 
 #define MODULE_QUEUE "moduleQueue"
 #define METHOD_ADD "methodAdd"
+#define METHOD_SEND "methodSend"
 #define METHOD_DELETE "methodDelete"
 
 #define MODULE_CHAT "moduleChat"
@@ -40,6 +41,7 @@ struct Request {
     int page;
     int hospital_id;
 
+    char text[256];
     char name[256];
     char email[256];
     char search[256];

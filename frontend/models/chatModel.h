@@ -5,6 +5,8 @@
 #ifndef CHAT_MODEL_H
 #define CHAT_MODEL_H
 
+#include "userModel.h"
+
 #define TABLE_CHAT "chats"
 #define IPP_CHAT 4
 

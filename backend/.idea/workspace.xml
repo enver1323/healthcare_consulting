@@ -12,19 +12,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa3eb853-5290-4b55-81f6-4f63200a255d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/domain/models/messageModel.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/repositories/messageRepository.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/models/clientModel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/94b98795-da23-4616-a8ec-dd3732e03fa1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/94b98795-da23-4616-a8ec-dd3732e03fa1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/backend.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/backend.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/backend.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/backend.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/backend.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/backend.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/backend.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/backend.dir/main.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/backend" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/backend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/clientsInjection.h" beforeDir="false" afterPath="$PROJECT_DIR$/controller/clientsInjection.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/models/modelList.h" beforeDir="false" afterPath="$PROJECT_DIR$/domain/models/modelList.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/models/response.h" beforeDir="false" afterPath="$PROJECT_DIR$/domain/models/response.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/repositories/chatRepository.h" beforeDir="false" afterPath="$PROJECT_DIR$/domain/repositories/chatRepository.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/services/chatService.c" beforeDir="false" afterPath="$PROJECT_DIR$/domain/services/chatService.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/services/hospitalService.c" beforeDir="false" afterPath="$PROJECT_DIR$/domain/services/hospitalService.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/services/queueService.c" beforeDir="false" afterPath="$PROJECT_DIR$/domain/services/queueService.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/request.h" beforeDir="false" afterPath="$PROJECT_DIR$/routes/request.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/router.h" beforeDir="false" afterPath="$PROJECT_DIR$/routes/router.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/client.h" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/client.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/frontend.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/frontend.dir/C.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/frontend.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/frontend.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/frontend.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/frontend.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/frontend.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/frontend.dir/main.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/frontend" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/cmake-build-debug/frontend" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/models/chatModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/models/chatModel.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/models/diseaseModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/models/diseaseModel.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/models/doctorModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/models/doctorModel.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/models/modelList.h" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/models/modelList.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/models/response.h" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/models/response.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/models/userModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/models/userModel.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/routes/request.h" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/routes/request.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/socket.h" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/socket.h" afterDir="false" />
     </list>
@@ -68,14 +84,7 @@
         <item name="hcs@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="hcs: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="doctors: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="hcs@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="hcs: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="queues: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="messages: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -109,17 +118,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/domain/repositories" />
-      <recent name="$PROJECT_DIR$/domain/models" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/domain/models" />
       <recent name="$PROJECT_DIR$/routes" />
       <recent name="$PROJECT_DIR$/domain" />
       <recent name="$PROJECT_DIR$/models" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/core/database" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/domain/repositories" />
+      <recent name="$PROJECT_DIR$/domain/models" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -142,22 +151,12 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:hcs@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@12972222" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@3b44314f" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:hcs@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="com.intellij.database.console.session.MessageBusSession@7a0def90" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:hcs@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@3b65f7bb" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:hcs@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@182ca0b3" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -197,7 +196,7 @@
       <workItem from="1576597271627" duration="1816000" />
       <workItem from="1576602948741" duration="672000" />
       <workItem from="1576603631366" duration="15509000" />
-      <workItem from="1576683993322" duration="9567000" />
+      <workItem from="1576683993322" duration="16672000" />
     </task>
     <servers />
   </component>
@@ -225,50 +224,50 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="743" y="313" width="424" height="487" key="FileChooserDialogImpl/0.30.1920.1050@0.30.1920.1050" timestamp="1576686306967" />
-    <state width="1874" height="276" key="GridCell.Tab.0.bottom" timestamp="1576698703583">
+    <state width="1291" height="275" key="GridCell.Tab.0.bottom" timestamp="1576705949813">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1874" height="276" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1576698703583" />
-    <state width="1874" height="276" key="GridCell.Tab.0.center" timestamp="1576698703582">
+    <state width="1291" height="275" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1576705949813" />
+    <state width="1291" height="275" key="GridCell.Tab.0.center" timestamp="1576705949813">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1874" height="276" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1576698703582" />
-    <state width="1874" height="276" key="GridCell.Tab.0.left" timestamp="1576698703581">
+    <state width="1291" height="275" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1576705949813" />
+    <state width="1291" height="275" key="GridCell.Tab.0.left" timestamp="1576705949813">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1874" height="276" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1576698703581" />
-    <state width="1874" height="276" key="GridCell.Tab.0.right" timestamp="1576698703582">
+    <state width="1291" height="275" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1576705949813" />
+    <state width="1291" height="275" key="GridCell.Tab.0.right" timestamp="1576705949813">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1874" height="276" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1576698703582" />
-    <state width="1874" height="265" key="GridCell.Tab.1.bottom" timestamp="1576686528438">
+    <state width="1291" height="275" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1576705949813" />
+    <state width="1874" height="264" key="GridCell.Tab.1.bottom" timestamp="1576705035421">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1874" height="265" key="GridCell.Tab.1.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1576686528438" />
-    <state width="1874" height="265" key="GridCell.Tab.1.center" timestamp="1576686528438">
+    <state width="1874" height="264" key="GridCell.Tab.1.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1576705035421" />
+    <state width="1874" height="264" key="GridCell.Tab.1.center" timestamp="1576705035421">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1874" height="265" key="GridCell.Tab.1.center/0.30.1920.1050@0.30.1920.1050" timestamp="1576686528438" />
-    <state width="1874" height="265" key="GridCell.Tab.1.left" timestamp="1576686528438">
+    <state width="1874" height="264" key="GridCell.Tab.1.center/0.30.1920.1050@0.30.1920.1050" timestamp="1576705035421" />
+    <state width="1874" height="264" key="GridCell.Tab.1.left" timestamp="1576705035421">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1874" height="265" key="GridCell.Tab.1.left/0.30.1920.1050@0.30.1920.1050" timestamp="1576686528438" />
-    <state width="1874" height="265" key="GridCell.Tab.1.right" timestamp="1576686528438">
+    <state width="1874" height="264" key="GridCell.Tab.1.left/0.30.1920.1050@0.30.1920.1050" timestamp="1576705035421" />
+    <state width="1874" height="264" key="GridCell.Tab.1.right" timestamp="1576705035421">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1874" height="265" key="GridCell.Tab.1.right/0.30.1920.1050@0.30.1920.1050" timestamp="1576686528438" />
-    <state x="464" y="190" width="992" height="733" key="SettingsEditor" timestamp="1576220449775">
+    <state width="1874" height="264" key="GridCell.Tab.1.right/0.30.1920.1050@0.30.1920.1050" timestamp="1576705035421" />
+    <state x="464" y="190" width="992" height="733" key="SettingsEditor" timestamp="1576702807788">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="464" y="190" width="992" height="733" key="SettingsEditor/0.30.1920.1050@0.30.1920.1050" timestamp="1576220449775" />
+    <state x="464" y="190" width="992" height="733" key="SettingsEditor/0.30.1920.1050@0.30.1920.1050" timestamp="1576702807788" />
     <state x="862" y="452" width="319" height="232" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1576606000812">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="862" y="452" width="319" height="232" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.30.1920.1050@0.30.1920.1050" timestamp="1576606000812" />
-    <state x="679" y="197" width="552" height="718" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1576617093130">
+    <state x="679" y="197" width="552" height="718" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1576703055970">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="679" y="197" width="552" height="718" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1576617093130" />
+    <state x="679" y="197" width="552" height="718" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1576703055970" />
     <state x="100" y="130" width="1720" height="850" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1576412524958">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
@@ -289,10 +288,10 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="624" y="254" key="run.anything.popup/0.30.1920.1050@0.30.1920.1050" timestamp="1576696593762" />
-    <state x="623" y="261" width="672" height="678" key="search.everywhere.popup" timestamp="1576697561349">
+    <state x="623" y="261" width="672" height="678" key="search.everywhere.popup" timestamp="1576706214057">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="623" y="261" width="672" height="678" key="search.everywhere.popup/0.30.1920.1050@0.30.1920.1050" timestamp="1576697561349" />
+    <state x="623" y="261" width="672" height="678" key="search.everywhere.popup/0.30.1920.1050@0.30.1920.1050" timestamp="1576706214057" />
     <state x="685" y="469" width="540" height="174" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1576399800318">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
@@ -302,9 +301,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/domain/services/queueService.c</url>
-          <line>34</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/domain/services/hospitalService.c</url>
+          <line>26</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/domain/services/userService.c</url>
+          <line>54</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

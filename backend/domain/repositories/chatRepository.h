@@ -25,7 +25,7 @@ struct Chat *getChatList(int page, char *user1, char *user2) {
     struct Chat *chats;
 
     sprintf(query,
-            "SELECT * FROM %s INNER JOIN %s as u1 ON (user1 = u1.user1) INNER JOIN %s as u2 ON (user2 = u2.user1) WHERE (user1 = '%s' OR user2 = '%s') AND (user1 = '%s' OR user2 = '%s') LIMIT %d OFFSET %d",
+            "SELECT * FROM %s INNER JOIN %s as u1 ON (user1 = u1.email) INNER JOIN %s as u2 ON (user2 = u2.email) WHERE (user1 LIKE '%s' OR user2 LIKE '%s') AND (user1 LIKE '%s' OR user2 LIKE '%s') LIMIT %d OFFSET %d",
             TABLE_CHAT, TABLE_USER, TABLE_USER, user1,
             user1, user2, user2, IPP_CHAT, offset);
 
@@ -58,10 +58,6 @@ struct Chat createChat(char *user1, char *user2) {
     closeDBConnection(conn);
 
     return chat;
-}
-
-struct Chat getChat(){
-
 }
 
 struct Chat *fillChatModels(MYSQL_RES *result) {

@@ -4,9 +4,11 @@
 CMakeFiles/frontend.dir/main.c.o
  /home/enver/Projects/TermProject/frontend/main.c
  /home/enver/Projects/TermProject/frontend/models/chatModel.h
+ /home/enver/Projects/TermProject/frontend/models/clientModel.h
  /home/enver/Projects/TermProject/frontend/models/diseaseModel.h
  /home/enver/Projects/TermProject/frontend/models/doctorModel.h
  /home/enver/Projects/TermProject/frontend/models/hospitalModel.h
+ /home/enver/Projects/TermProject/frontend/models/messageModel.h
  /home/enver/Projects/TermProject/frontend/models/modelList.h
  /home/enver/Projects/TermProject/frontend/models/queueModel.h
  /home/enver/Projects/TermProject/frontend/models/response.h
