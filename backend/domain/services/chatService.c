@@ -74,7 +74,7 @@ struct Response sendMessage(struct Client *client, struct Request request) {
     if (receiver.socket)
         send(receiver.socket, &response, sizeof(response), 0);
 
-    response.data.messageNode = fillMessageModel(0, client->userModel.email, request.email, request.text);
+    response.data.messageNode = fillMessageModel(0, client->userModel.email, request.email, request.text, 0);
 
     return response;
 }

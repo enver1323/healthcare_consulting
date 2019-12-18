@@ -12,10 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa3eb853-5290-4b55-81f6-4f63200a255d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/repositories/messageRepository.h" beforeDir="false" afterPath="$PROJECT_DIR$/domain/repositories/messageRepository.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/client.h" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/client.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/backend.dir/main.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/services/chatService.c" beforeDir="false" afterPath="$PROJECT_DIR$/domain/services/chatService.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +167,7 @@
       <workItem from="1576597271627" duration="1816000" />
       <workItem from="1576602948741" duration="672000" />
       <workItem from="1576603631366" duration="15509000" />
-      <workItem from="1576683993322" duration="16850000" />
+      <workItem from="1576683993322" duration="16916000" />
     </task>
     <servers />
   </component>
