@@ -43,10 +43,11 @@ struct Message createMessage(int chatId, char *sender, char *receiver, char *tex
     char query[1024];
 
     MYSQL *conn = estDBConnection();
+    clock_t time = clock();
 
     sprintf(query,
             "INSERT INTO %s (chat_id, sender_email, receiver_email, text, time) VALUES('%d', '%s', '%s', '%s', '%ld')",
-            TABLE_MESSAGE, chatId, sender, receiver, text, clock());
+            TABLE_MESSAGE, chatId, sender, receiver, text, time);
 
     fprintf(stderr, "%s\n", query);
 
@@ -54,7 +55,7 @@ struct Message createMessage(int chatId, char *sender, char *receiver, char *tex
 
     closeDBConnection(conn);
 
-    return fillMessageModel(chatId, sender, receiver, text);
+    return fillMessageModel(chatId, sender, receiver, text, time);
 }
 
 struct Message *fillMessageModels(MYSQL_RES *result) {

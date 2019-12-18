@@ -12,37 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa3eb853-5290-4b55-81f6-4f63200a255d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/domain/models/messageModel.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/repositories/messageRepository.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/models/clientModel.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/94b98795-da23-4616-a8ec-dd3732e03fa1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/94b98795-da23-4616-a8ec-dd3732e03fa1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/backend.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/backend.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/backend.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/backend.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/backend.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/backend.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/backend.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/backend.dir/main.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/backend" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/backend" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/clientsInjection.h" beforeDir="false" afterPath="$PROJECT_DIR$/controller/clientsInjection.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/models/modelList.h" beforeDir="false" afterPath="$PROJECT_DIR$/domain/models/modelList.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/models/response.h" beforeDir="false" afterPath="$PROJECT_DIR$/domain/models/response.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/repositories/chatRepository.h" beforeDir="false" afterPath="$PROJECT_DIR$/domain/repositories/chatRepository.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/services/chatService.c" beforeDir="false" afterPath="$PROJECT_DIR$/domain/services/chatService.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/services/hospitalService.c" beforeDir="false" afterPath="$PROJECT_DIR$/domain/services/hospitalService.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/services/queueService.c" beforeDir="false" afterPath="$PROJECT_DIR$/domain/services/queueService.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/request.h" beforeDir="false" afterPath="$PROJECT_DIR$/routes/request.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/router.h" beforeDir="false" afterPath="$PROJECT_DIR$/routes/router.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/repositories/messageRepository.h" beforeDir="false" afterPath="$PROJECT_DIR$/domain/repositories/messageRepository.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/client.h" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/client.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/frontend.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/frontend.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/frontend.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/frontend.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/frontend.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/frontend.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/frontend.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/cmake-build-debug/CMakeFiles/frontend.dir/main.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/cmake-build-debug/frontend" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/cmake-build-debug/frontend" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/models/chatModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/models/chatModel.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/models/modelList.h" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/models/modelList.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/models/response.h" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/models/response.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/routes/request.h" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/routes/request.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/socket.h" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/socket.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +169,7 @@
       <workItem from="1576597271627" duration="1816000" />
       <workItem from="1576602948741" duration="672000" />
       <workItem from="1576603631366" duration="15509000" />
-      <workItem from="1576683993322" duration="16672000" />
+      <workItem from="1576683993322" duration="16850000" />
     </task>
     <servers />
   </component>
@@ -224,22 +197,22 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="743" y="313" width="424" height="487" key="FileChooserDialogImpl/0.30.1920.1050@0.30.1920.1050" timestamp="1576686306967" />
-    <state width="1291" height="275" key="GridCell.Tab.0.bottom" timestamp="1576705949813">
+    <state width="1874" height="276" key="GridCell.Tab.0.bottom" timestamp="1576706221785">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1291" height="275" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1576705949813" />
-    <state width="1291" height="275" key="GridCell.Tab.0.center" timestamp="1576705949813">
+    <state width="1874" height="276" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1576706221785" />
+    <state width="1874" height="276" key="GridCell.Tab.0.center" timestamp="1576706221784">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1291" height="275" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1576705949813" />
-    <state width="1291" height="275" key="GridCell.Tab.0.left" timestamp="1576705949813">
+    <state width="1874" height="276" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1576706221784" />
+    <state width="1874" height="276" key="GridCell.Tab.0.left" timestamp="1576706221783">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1291" height="275" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1576705949813" />
-    <state width="1291" height="275" key="GridCell.Tab.0.right" timestamp="1576705949813">
+    <state width="1874" height="276" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1576706221783" />
+    <state width="1874" height="276" key="GridCell.Tab.0.right" timestamp="1576706221784">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1291" height="275" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1576705949813" />
+    <state width="1874" height="276" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1576706221784" />
     <state width="1874" height="264" key="GridCell.Tab.1.bottom" timestamp="1576705035421">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
