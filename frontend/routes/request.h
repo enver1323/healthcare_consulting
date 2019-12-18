@@ -8,6 +8,7 @@
 
 #define MODULE_AUTH "moduleAuth"
 #define METHOD_REGISTER "methodRegister"
+#define METHOD_RESTORE "methodRestore"
 #define METHOD_LOGIN "methodLogin"
 
 #define MODULE_HOSPITAL "moduleHospital"
@@ -17,6 +18,12 @@
 #define METHOD_LIST "methodList"
 #define METHOD_SHOW "methodShow"
 #define METHOD_SEARCH "methodSearch"
+
+#define MODULE_QUEUE "moduleQueue"
+#define METHOD_ADD "methodAdd"
+#define METHOD_DELETE "methodDelete"
+
+#define MODULE_CHAT "moduleChat"
 
 struct Route {
     char module[1024];
@@ -36,6 +43,9 @@ struct Request {
     char search[256];
     char password[1024];
     char description[1024];
+
+    char doctorEmail[256];
+    char patientEmail[256];
 };
 
 #endif

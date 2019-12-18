@@ -21,17 +21,17 @@ struct sockaddr_in serv_addr;
 
 void delay(int delayTime) {
     time_t startTime = time(NULL);
-    while(time(NULL) < startTime + delayTime){
-
-    } //stranno vrode ne rabotaet chto li, t.k slishkom bistro res daet ++
+    while (time(NULL) < startTime + delayTime) {}
 }
 
 void makeRequest(int);
 
+void restoreSession();
+
 int initSocket() {
     printf("CREATING CLIENT SOCKET .....\n");
     if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
-        printf("\n Socket creation error \n"); //wtf krch go git last push
+        printf("\n Socket creation error \n");
         return -1;
     }
 
@@ -51,28 +51,19 @@ int initSocket() {
         return -1;
     }
 
-    for (int i = 0; i < 7; ++i) {
-        makeRequest(i);
-        delay(1);
-    }
-    for (int j = 5; j >= 0; --j) { //v proshliy raz Page 4 first item was L.Luchkov Page 2 broken right now, that is y it shifted
-        makeRequest(j);
-        delay(1);
-    }
-    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    restoreSession();
+    makeRequest(0);
 
     close(sock);
 
     return 0;
 }
 
-void makeRequest(int page) {
+void restoreSession() {
     struct Request request;
-    sprintf(request.route.module, MODULE_DOCTOR);
-    sprintf(request.route.method, METHOD_LIST);
-//    request.hospital_id = 0;
-    request.page = page;
-    sprintf(request.search, "");
+    sprintf(request.route.module, MODULE_AUTH);
+    sprintf(request.route.method, METHOD_RESTORE);
+    sprintf(request.email, "enver1323@gmail.com");
 
     send(sock, &request, sizeof(request), 0);
 
@@ -80,9 +71,29 @@ void makeRequest(int page) {
 
     read(sock, &response, sizeof(response));
 
-    printf("\n\nPAGE %d\n %d\n", page+1,response.code);
-    for (int i = 0; i < IPP_HOSPITAL; i++) {
-        printf("%s\n", response.data.doctorList[i].name);
-    }
+    printf("\nCODE %d\n", response.code);
+    printf("\nUSER EMAIL: %s\n", response.data.userNode.email);
+    printf("\nUSER NAME: %s\n", response.data.userNode.name);
+}
 
+void makeRequest(int page) {
+    struct Request request;
+    sprintf(request.route.module, MODULE_HOSPITAL);
+    sprintf(request.route.method, METHOD_LIST);
+
+    request.id = 56;
+//    sprintf(request.search, "Abdulhakim");
+    request.page = page;
+
+    send(sock, &request, sizeof(request), 0);
+
+    struct Response response;
+
+    read(sock, &response, sizeof(response));
+
+    printf("\nCODE %d\n", response.code);
+    for (int i = 0; i < IPP_DOCTOR; i++){
+        printf("%s\n", response.data.hospitalNode.doctorList[i].name);
+        printf("%d\n", response.data.hospitalNode.doctorList[i].order);
+    }
 }

@@ -12,6 +12,8 @@ stdio.h
 socket.h
 /home/enver/Projects/TermProject/frontend/socket.h
 
+/home/enver/Projects/TermProject/frontend/models/chatModel.h
+
 /home/enver/Projects/TermProject/frontend/models/diseaseModel.h
 
 /home/enver/Projects/TermProject/frontend/models/doctorModel.h
@@ -27,6 +29,12 @@ diseaseModel.h
 /home/enver/Projects/TermProject/frontend/models/diseaseModel.h
 userModel.h
 /home/enver/Projects/TermProject/frontend/models/userModel.h
+queueModel.h
+/home/enver/Projects/TermProject/frontend/models/queueModel.h
+chatModel.h
+/home/enver/Projects/TermProject/frontend/models/chatModel.h
+
+/home/enver/Projects/TermProject/frontend/models/queueModel.h
 
 /home/enver/Projects/TermProject/frontend/models/response.h
 modelList.h

@@ -6,9 +6,6 @@
 
 #include "modelList.h"
 
-#define MODULE_HOSPITAL "moduleHospital"
-#define MODULE_DOCTOR "moduleDoctor"
-
 #define CODE_SUCCESS 200
 #define CODE_ERROR_INTERNAL 500
 
@@ -19,14 +16,18 @@
  * IPP - Items Per Page
  */
 struct Data{
-//    union {
+    union {
         struct Doctor doctorNode;
         struct Doctor doctorList[IPP_DOCTOR];
         struct Hospital hospitalNode;
         struct Hospital hospitalList[IPP_HOSPITAL];
         struct Disease diseaseList[IPP_DISEASE];
+        struct Queue queueNode;
+        struct Queue queueList[IPP_QUEUE];
         struct User userNode;
-//    };
+        struct Chat chatNode;
+        struct Chat chatList[IPP_CHAT];
+    };
 };
 
 struct Response {

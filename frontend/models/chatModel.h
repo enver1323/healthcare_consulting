@@ -10,8 +10,8 @@
 
 struct Chat {
     int id;
-    char user1[256];
-    char user2[256];
+    struct User user1;
+    struct User user2;
 };
 
 #endif //BACKEND_CHATMODEL_H
