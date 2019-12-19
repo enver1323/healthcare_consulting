@@ -38,9 +38,9 @@ struct Response {
     struct Data data;
 };
 
-int sendAll(int fd, void *buf, int n, int flags);
+int sendall(int fd, void *buf, int n, int flags);
 
-int sendAll(int fd, void *buf, int n, int flags)
+int sendall(int fd, void *buf, int n, int flags)
 {
     int total = 0, temp;
 
