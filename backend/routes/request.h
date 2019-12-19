@@ -19,7 +19,6 @@
 
 #define METHOD_LIST "methodList"
 #define METHOD_SHOW "methodShow"
-#define METHOD_SEARCH "methodSearch"
 
 #define MODULE_QUEUE "moduleQueue"
 #define METHOD_ADD "methodAdd"

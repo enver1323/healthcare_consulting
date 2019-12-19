@@ -124,7 +124,7 @@ int handleConnections() {
             curSd = clients[i].socket;
             if (FD_ISSET(curSd, &readFds)) {
                 /** Read incoming request and check if is closing one */
-                if (read(curSd, &request, sizeof(struct Request)) == 0) {
+                if (recv(curSd, &request, sizeof(struct Request), MSG_WAITALL) == 0) {
 
                     getpeername(curSd, (struct sockaddr *) &address, (socklen_t *) &addressLength);
                     printf("Host disconnected , ip %s , port %d \n", inet_ntoa(address.sin_addr),

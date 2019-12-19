@@ -107,7 +107,7 @@ int handleRequest(struct Client *client, struct Request *request) {
 
 int sendResponse(int sd, struct Response response) {
     int size = sizeof(response);
-    if (send(sd, &response, size, 0))
+    if (sendAll(sd, &response, size, 0))
         return EXIT_SUCCESS;
 
     fprintf(stderr, "Failed to send response");

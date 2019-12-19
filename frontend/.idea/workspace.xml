@@ -13,9 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="16351adf-b248-4923-aaef-73133ab3c5ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/domain/models/chatModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/domain/models/chatModel.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/domain/services/hospitalService.c" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/domain/services/hospitalService.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/domain/services/userService.c" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/domain/services/userService.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/controller/controller.c" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/controller/controller.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/routes/request.h" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/routes/request.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -117,7 +115,7 @@
       <workItem from="1576683731589" duration="10000" />
       <workItem from="1576683962469" duration="28000" />
       <workItem from="1576686309662" duration="14399000" />
-      <workItem from="1576736475440" duration="1899000" />
+      <workItem from="1576736475440" duration="2293000" />
     </task>
     <servers />
   </component>
