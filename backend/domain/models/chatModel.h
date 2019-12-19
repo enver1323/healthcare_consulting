@@ -8,6 +8,8 @@
 #define TABLE_CHAT "chats"
 #define IPP_CHAT 4
 
+#include "userModel.h"
+
 struct Chat {
     int id;
     struct User user1;

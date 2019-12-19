@@ -45,8 +45,7 @@ struct Request {
     char name[256];
     char email[256];
     char search[256];
-    char password[1024];
-    char description[1024];
+    char password[256];
 
     char doctorEmail[256];
     char patientEmail[256];

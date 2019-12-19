@@ -19,6 +19,8 @@ int startUserSession(struct Client *client, struct User user);
 int closeUserSession(struct Client *client);
 
 struct Response userRegister(struct Request request) {
+    fprintf(stderr, "Name: %s\nEmail: %s\nPassword: %s\n", request.name, request.email, request.password);
+
     struct User user = createUser(request.name, request.email, request.password);
     struct Response response;
     if (strlen(user.error)) {
@@ -34,6 +36,8 @@ struct Response userRegister(struct Request request) {
 }
 
 struct Response userLogin(struct Client *client, struct Request request) {
+    fprintf(stderr, "Email: %s\nPassword: %s\n", request.email, request.password);
+
     struct User user = loginUser(request.email, request.password);
     struct Response response;
 
