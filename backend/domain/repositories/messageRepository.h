@@ -24,7 +24,7 @@ struct Message *getMessageList(int page, int chatId) {
     int offset = page * IPP_MESSAGE;
     struct Message *messages;
 
-    sprintf(query, "SELECT * FROM %s, WHERE chat_id = %d ORDER BY `time` DESC LIMIT %d OFFSET %d", TABLE_MESSAGE,
+    sprintf(query, "SELECT * FROM %s WHERE chat_id = %d ORDER BY `time` DESC LIMIT %d OFFSET %d", TABLE_MESSAGE,
             chatId, IPP_MESSAGE, offset);
 
     MYSQL *conn = estDBConnection();
@@ -48,8 +48,6 @@ struct Message createMessage(int chatId, char *sender, char *receiver, char *tex
     sprintf(query,
             "INSERT INTO %s (chat_id, sender_email, receiver_email, text, time) VALUES('%d', '%s', '%s', '%s', '%ld')",
             TABLE_MESSAGE, chatId, sender, receiver, text, time);
-
-    fprintf(stderr, "%s\n", query);
 
     makeDBQuery(conn, query);
 

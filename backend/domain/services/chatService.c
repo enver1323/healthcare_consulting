@@ -26,7 +26,7 @@ struct Response chatList(struct Client *client, struct Request request) {
 
     free(chats);
 
-    response.code = 200;
+    response.code = CODE_SUCCESS;
     sprintf(response.message, "%s", MESSAGE_SUCCESS);
 
     return response;
@@ -35,7 +35,7 @@ struct Response chatList(struct Client *client, struct Request request) {
 struct Response startChat(struct Client *client, struct Request request) {
     struct Response response;
 
-    response.code = 200;
+    response.code = CODE_SUCCESS;
     response.data.chatNode = createChat(client->userModel.email, request.email);
     sprintf(response.message, "%s", MESSAGE_SUCCESS);
 

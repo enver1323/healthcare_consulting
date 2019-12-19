@@ -49,8 +49,6 @@ struct Chat createChat(char *user1, char *user2) {
 
     sprintf(query, "INSERT INTO %s (user1, user2) VALUES('%s', '%s')", TABLE_CHAT, user1, user2);
 
-    fprintf(stderr, "%s\n", query);
-
     makeDBQuery(conn, query);
 
     chat = getChatList(0, user1, user2)[0];

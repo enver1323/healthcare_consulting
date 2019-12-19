@@ -59,13 +59,13 @@ int initSocket() {
     }
 
     restoreSession();
-//    makeRequest(0);
-    pthread_create(&threads[0], NULL, rcvMsgs, (void *) 0);
+    makeRequest(0);
+//    pthread_create(&threads[0], NULL, rcvMsgs, (void *) 0);
 
-    pthread_create(&threads[1], NULL, sendMsgs, (void *) 1);
-    while (1) {
-
-    }
+//    pthread_create(&threads[1], NULL, sendMsgs, (void *) 1);
+//    while (1) {
+//
+//    }
 
     close(sock);
 
@@ -76,7 +76,7 @@ void restoreSession() {
     struct Request request;
     sprintf(request.route.module, MODULE_AUTH);
     sprintf(request.route.method, METHOD_RESTORE);
-    sprintf(request.email, "info@enver.uz");
+    sprintf(request.email, "enver1323@gmail.com");
 
     send(sock, &request, sizeof(request), 0);
 
@@ -114,7 +114,7 @@ void *sendMsgs(void *threadId) {
         sprintf(request.route.method, METHOD_SEND);
 
         request.id = 1;
-        sprintf(request.email, "enver1323@gmail.com");
+        sprintf(request.email, "info@enver.uz");
         sprintf(request.text, "%s", cchat);
 
         send(sock, &request, sizeof(request), 0);
@@ -131,10 +131,12 @@ void makeRequest(int page) {
     sprintf(request.route.module, MODULE_CHAT);
     sprintf(request.route.method, METHOD_SHOW);
 
-    request.id = 1;
+//    request.id = 1;
+//    sprintf(request.email, "enver1323@gmail.com");
 //    sprintf(request.doctorEmail, "info@enver.uz");
 //    sprintf(request.patientEmail, "abduhakim.muminov@minzdrav.uz");
     request.page = page;
+    request.id = 1;
 
     send(sock, &request, sizeof(request), 0);
 
@@ -143,9 +145,9 @@ void makeRequest(int page) {
     read(sock, &response, sizeof(response));
 
     printf("\nCODE %d\n", response.code);
-//    printf("\nORDER %d\n", response.data.queueNode.order);
-    for (int i = 0; i < IPP_CHAT; i++){
-//        printf("%s\n", response.data.hospitalNode.doctorList[i].name);
-        printf("%d\n", response.data.chatList[i].id);
+//    printf("\nID %d\n", response.data.messageList[].id);
+    for (int i = 0; i < IPP_MESSAGE; i++){
+        printf("%s\n", response.data.messageList[i].text);
+//        printf("%d\n", response.data.chatList[i].id);
     }
 }
