@@ -24,10 +24,8 @@ struct Disease *getDiseaseList(int page, char *search) {
     struct Disease *diseases;
 
     sprintf(query,
-            "SELECT * FROM %s LEFT OUTER JOIN (SELECT * FROM %s INNER JOIN %s USING(email)) as docs ON( docs.specification = %s.specification) WHERE %s.name LIKE '%%%s%%' OR synonyms LIKE '%%%s%%' LIMIT %d OFFSET %d",
+            "SELECT * FROM %s INNER JOIN (SELECT * FROM %s INNER JOIN %s USING(email)) as docs ON( docs.specification = %s.specification) WHERE %s.name LIKE '%%%s%%' OR synonyms LIKE '%%%s%%' LIMIT %d OFFSET %d",
             TABLE_DISEASE, TABLE_DOCTOR, TABLE_USER, TABLE_DISEASE, TABLE_DISEASE, search, search, IPP_DISEASE, offset);
-
-    fprintf(stderr, "%s", query);
 
     MYSQL *conn = estDBConnection();
 

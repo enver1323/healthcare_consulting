@@ -128,7 +128,7 @@ void *sendMsgs(void *threadId) {
 
 void makeRequest(int page) {
     struct Request request;
-    sprintf(request.route.module, MODULE_HOSPITAL);
+    sprintf(request.route.module, MODULE_DISESE);
     sprintf(request.route.method, METHOD_LIST);
 
 //    request.id = 1;
@@ -147,8 +147,8 @@ void makeRequest(int page) {
     printf("\nCODE %d\n", response.code);
 //    printf("\nID %d\n", response.data.messageList[].id);
     for (int i = 0; i < IPP_DISEASE; i++){
-        printf("%s\n", response.data.diseaseList[i].doctorNode.name);
-        printf("%s\n", response.data.diseaseList[i].name);
+        printf("%s\n", response.data.doctorList[i].specification);
+//        printf("%s\n", response.data.hospitalList[i].name);
 //        printf("%d\n", response.data.chatList[i].id);
     }
 }
