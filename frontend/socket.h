@@ -128,17 +128,17 @@ void *sendMsgs(void *threadId) {
 
 void makeRequest(int page) {
     struct Request request;
-    sprintf(request.route.module, MODULE_CHAT);
-    sprintf(request.route.method, METHOD_SHOW);
+    sprintf(request.route.module, MODULE_HOSPITAL);
+    sprintf(request.route.method, METHOD_LIST);
 
 //    request.id = 1;
 //    sprintf(request.email, "enver1323@gmail.com");
 //    sprintf(request.doctorEmail, "info@enver.uz");
 //    sprintf(request.patientEmail, "abduhakim.muminov@minzdrav.uz");
     request.page = page;
-    request.id = 1;
+//    request.id = 1;
 
-    send(sock, &request, sizeof(request), 0);
+    sendall(sock, &request, sizeof(request), 0);
 
     struct Response response;
 
@@ -146,8 +146,9 @@ void makeRequest(int page) {
 
     printf("\nCODE %d\n", response.code);
 //    printf("\nID %d\n", response.data.messageList[].id);
-    for (int i = 0; i < IPP_MESSAGE; i++){
-        printf("%s\n", response.data.messageList[i].text);
+    for (int i = 0; i < IPP_DISEASE; i++){
+        printf("%s\n", response.data.diseaseList[i].doctorNode.name);
+        printf("%s\n", response.data.diseaseList[i].name);
 //        printf("%d\n", response.data.chatList[i].id);
     }
 }

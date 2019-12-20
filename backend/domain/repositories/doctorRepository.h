@@ -12,7 +12,7 @@
 /** Function Declarations */
 struct Doctor *fillDoctorModels(MYSQL_RES *result);
 
-struct Doctor fillDoctorModel(char *email, int hospital_id, char *phone, char *name, int order);
+struct Doctor fillDoctorModel(char *email, int hospital_id, char *phone, char *name, int order, char *specification);
 
 struct Doctor *getDoctorList(char *email, int page, int hospital, char *search);
 
@@ -49,14 +49,14 @@ struct Doctor *fillDoctorModels(MYSQL_RES *result) {
     MYSQL_ROW row;
 
     while ((row = mysql_fetch_row(result)) != NULL)
-        doctors[counter++] = fillDoctorModel(row[0], atoi(row[1]), row[2], row[3], row[6] == NULL ? 0 : atoi(row[6]));
+        doctors[counter++] = fillDoctorModel(row[0], atoi(row[1]), row[2], row[3], row[6] == NULL ? 0 : atoi(row[6]), row[7]);
 
     mysql_free_result(result);
 
     return doctors;
 }
 
-struct Doctor fillDoctorModel(char *email, int hospital_id, char *phone, char *name, int order) {
+struct Doctor fillDoctorModel(char *email, int hospital_id, char *phone, char *name, int order, char *specification) {
     struct Doctor doctor;
 
     doctor.order = order;
@@ -64,6 +64,7 @@ struct Doctor fillDoctorModel(char *email, int hospital_id, char *phone, char *n
     sprintf(doctor.name, "%s", name);
     sprintf(doctor.email, "%s", email);
     sprintf(doctor.phone, "%s", phone);
+    sprintf(doctor.specification, "%s", specification);
 
     return doctor;
 }

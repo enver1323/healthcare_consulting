@@ -15,6 +15,7 @@ struct Doctor {
     char name[256];
     char email[256];
     char phone[256];
+    char specification[256];
 };
 
 #endif

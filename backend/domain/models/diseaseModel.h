@@ -17,6 +17,9 @@ struct Disease {
     char synonyms[1024];
     float auroc;
     char description[1024];
+    char specification[256];
+
+    struct Doctor doctorNode;
 };
 
 #endif

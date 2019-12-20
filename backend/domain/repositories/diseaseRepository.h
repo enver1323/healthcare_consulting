@@ -14,7 +14,7 @@ struct Disease *fillDiseaseModels(MYSQL_RES *result);
 
 struct Disease
 fillDiseaseModel(int id, char *name, int treats, int palliates, int total_edges, char *synonyms, float auroc,
-                 char *description);
+                 char *description, char *specification);
 
 struct Disease *getDiseaseList(int page, char *search);
 
@@ -24,9 +24,10 @@ struct Disease *getDiseaseList(int page, char *search) {
     struct Disease *diseases;
 
     sprintf(query,
-            "SELECT * FROM %s WHERE name LIKE '%%%s%%' OR synonyms LIKE '%%%s%%' ORDER BY id DESC LIMIT %d OFFSET %d",
-            TABLE_DISEASE, search,
-            search, IPP_DISEASE, offset);
+            "SELECT * FROM %s LEFT OUTER JOIN (SELECT * FROM %s INNER JOIN %s USING(email)) as docs ON( docs.specification = %s.specification) WHERE %s.name LIKE '%%%s%%' OR synonyms LIKE '%%%s%%' LIMIT %d OFFSET %d",
+            TABLE_DISEASE, TABLE_DOCTOR, TABLE_USER, TABLE_DISEASE, TABLE_DISEASE, search, search, IPP_DISEASE, offset);
+
+    fprintf(stderr, "%s", query);
 
     MYSQL *conn = estDBConnection();
 
@@ -45,12 +46,16 @@ struct Disease *fillDiseaseModels(MYSQL_RES *result) {
     int counter = 0;
     MYSQL_ROW row;
 
-    while ((row = mysql_fetch_row(result)) != NULL)
-        diseases[counter++] = fillDiseaseModel(atoi(row[0]), row[1], atoi(row[2]),
-                                               atoi(row[3]), atoi(row[4]), row[5],
-                                               row[6] != NULL && strlen(row[6]) ? atof(row[6]) : 0.0,
-                                               row[7] != NULL && strlen(row[7]) ? row[7] : "");
+    while ((row = mysql_fetch_row(result)) != NULL){
+        struct Disease disease = fillDiseaseModel(atoi(row[0]), row[1], atoi(row[2]),
+                                                  atoi(row[3]), atoi(row[4]), row[5],
+                                                  row[6] != NULL && strlen(row[6]) ? atof(row[6]) : 0.0,
+                                                  row[7] != NULL && strlen(row[7]) ? row[7] : "", row[8]);
 
+
+        disease.doctorNode = fillDoctorModel(row[9], atoi(row[10]), row[11], row[13], 0, row[8]);
+        diseases[counter++] = disease;
+    }
     mysql_free_result(result);
 
     return diseases;
@@ -58,7 +63,7 @@ struct Disease *fillDiseaseModels(MYSQL_RES *result) {
 
 struct Disease
 fillDiseaseModel(int id, char *name, int treats, int palliates, int total_edges, char *synonyms, float auroc,
-                 char *description) {
+                 char *description, char *specification) {
     struct Disease disease;
 
     disease.id = id;
@@ -69,6 +74,7 @@ fillDiseaseModel(int id, char *name, int treats, int palliates, int total_edges,
     sprintf(disease.synonyms, "%s", synonyms);
     disease.auroc = auroc;
     sprintf(disease.description, "%s", description);
+    sprintf(disease.specification, "%s", specification);
 
     return disease;
 }

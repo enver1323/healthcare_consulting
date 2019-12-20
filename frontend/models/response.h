@@ -38,4 +38,21 @@ struct Response {
     struct Data data;
 };
 
+int sendall(int fd, void *buf, int n, int flags);
+
+int sendall(int fd, void *buf, int n, int flags)
+{
+    int total = 0, temp;
+
+    while (total < n)
+    {
+        temp = send(fd, buf + total, n - total, flags);
+        if (temp == -1)
+            break;
+        total += temp;
+    }
+
+    return (temp == -1 ? -1 : total);
+}
+
 #endif
